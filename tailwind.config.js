@@ -50,7 +50,7 @@ module.exports = {
 					400: '#FD2B9C',
 					500: '#FE0496',
 				},
-				lightgreen: {
+				green: {
 					400: '#2ECB71',
 				},
 			},
