@@ -17,7 +17,7 @@
 	<body class="h-full">
 		<div class="wrapper flex min-h-full flex-col">
 			<!-- Header -->
-			<header class="shadow-header py-[18px]">
+			<header class="py-[18px] shadow-header">
 				<div class="container">
 					<div class="flex items-center">
 						<a href=" #">
@@ -33,7 +33,7 @@
 								<li>
 									<a
 										href="#"
-										class="text-secondary-400 hover:text-secondary-800 py-5 font-medium transition-colors"
+										class="py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
 									>
 										<span>Features</span>
 									</a>
@@ -41,14 +41,14 @@
 								<li>
 									<a
 										href="#"
-										class="text-secondary-400 hover:text-secondary-800 py-5 font-medium transition-colors"
+										class="py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
 									>
 										<span>Pricing</span>
 									</a>
 								</li>
 								<!-- Menu Item With Submenu -->
 								<li
-									class="text-secondary-400 hover:text-secondary-800 group relative cursor-pointer py-5 font-medium transition-colors"
+									class="group relative cursor-pointer py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
 								>
 									<a href="#" class="flex items-center gap-2">
 										<span>More</span>
@@ -72,11 +72,11 @@
 
 										<!-- SUbmenu | Dropdown -->
 										<ul
-											class="shadow-dropdown border-secondary-200 absolute left-0 top-full hidden min-w-max rounded-lg border bg-white group-hover:grid"
+											class="absolute left-0 top-full hidden min-w-max rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
 										>
 											<li>
 												<a
-													class="text-secondary-900 flex px-4 py-3 hover:bg-gray-100"
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
 													href="#"
 												>
 													Inner Link 1
@@ -84,7 +84,7 @@
 											</li>
 											<li>
 												<a
-													class="text-secondary-900 flex px-4 py-3 hover:bg-gray-100"
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
 													href="#"
 												>
 													Inner Link 2
@@ -92,7 +92,7 @@
 											</li>
 											<li>
 												<a
-													class="text-secondary-900 flex px-4 py-3 hover:bg-gray-100"
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
 													href="#"
 												>
 													Inner Link 3
@@ -100,7 +100,7 @@
 											</li>
 											<li>
 												<a
-													class="text-secondary-900 flex px-4 py-3 hover:bg-gray-100"
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
 													href="#"
 												>
 													Inner Link 4
@@ -108,7 +108,7 @@
 											</li>
 											<li>
 												<a
-													class="text-secondary-900 flex px-4 py-3 hover:bg-gray-100"
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
 													href="#"
 												>
 													Inner Link 5
@@ -116,7 +116,7 @@
 											</li>
 											<li>
 												<a
-													class="text-secondary-900 flex px-4 py-3 hover:bg-gray-100"
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
 													href="#"
 												>
 													Inner Link 6
@@ -131,7 +131,7 @@
 						<!-- Mobile menu -->
 						<nav
 							id="mobile-menu"
-							class="bg-secondary-700 fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto py-4"
+							class="fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto bg-secondary-700 py-4"
 						>
 							<ul class="flex flex-col items-center justify-center gap-10">
 								<li>
@@ -241,13 +241,13 @@
 							class="group relative z-20 hidden h-5 w-[30px] sm:ml-auto sm:block"
 						>
 							<span
-								class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-black transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
+								class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
 							></span>
 							<span
-								class="absolute left-0 top-1/2 flex h-[2px] w-[30px] -translate-y-1/2 translate-x-0 bg-black transition-transform group-[.active]:opacity-0"
+								class="absolute left-0 top-1/2 flex h-[2px] w-[30px] -translate-y-1/2 translate-x-0 bg-secondary-700 transition-transform group-[.active]:opacity-0"
 							></span>
 							<span
-								class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-black transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45 group-[.active]:bg-white"
+								class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45 group-[.active]:bg-white"
 							></span>
 						</button>
 					</div>
@@ -255,7 +255,38 @@
 			</header>
 			<!-- Main Content -->
 			<main class="flex-auto">
-				<div class="container"></div>
+				<!-- Home -->
+				<section class="py-20 md:py-10">
+					<div class="container">
+						<div class="flex flex-col items-center gap-5">
+							<p
+								class="flex items-center gap-3 rounded-full bg-orange-200 p-3 text-sm tracking-sm text-orange-500"
+							>
+								<img src="./img/icons/orange-star.svg" alt="star icon" />
+								Create surveys and understand your responses with AI
+							</p>
+							<h2 class="max-w-[452px] text-center">
+								Create surveys with AI and collect insights from your
+								<span
+									class="relative px-1 text-violet-500 after:absolute after:-bottom-1 after:left-0 after:right-1 after:top-1 after:-z-10 after:w-full after:rounded after:bg-violet-200"
+								>
+									cust
+								</span>
+							</h2>
+
+							<div
+								class="flex items-center gap-10 md:gap-5 sm:mt-10 sm:flex-col sm:gap-3"
+							>
+								<a href="#" class="btn">Create your account</a>
+								<a href="#" class="btn btn-outline">Demo Survey</a>
+							</div>
+
+							<p class="text-sm font-medium tracking-sm text-secondary-300">
+								Get up to 150 responses a month for free
+							</p>
+						</div>
+					</div>
+				</section>
 			</main>
 
 			<!-- Footer -->
