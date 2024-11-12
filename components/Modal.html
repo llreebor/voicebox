@@ -1,0 +1,64 @@
+<!-- [START] HTML Modal -->
+<div>
+	<div
+		id="modal"
+		class="fixed left-0 top-0 z-10 hidden h-screen w-screen items-center justify-center bg-black/90"
+	>
+		<!-- Modal -->
+		<div class="relative h-[300px] w-[400px] rounded-md bg-white">
+			<!-- Close Btn -->
+			<button class="group">
+				<svg
+					id="close-btn"
+					class="absolute right-5 top-5 h-6 w-6"
+					viewBox="0 0 28 28"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						class="fill-black transition-colors group-hover:fill-blue-400"
+						d="M17.3145 13.9999L26.5918 4.72257C27.0321 4.28305 27.2798 3.68662 27.2804 3.06449C27.2809 2.44236 27.0343 1.84549 26.5948 1.40519C26.1552 0.964888 25.5588 0.717221 24.9367 0.716672C24.3145 0.716122 23.7177 0.962735 23.2774 1.40226L14 10.6796L4.72269 1.40226C4.28239 0.961958 3.68522 0.7146 3.06254 0.7146C2.43986 0.7146 1.84268 0.961958 1.40238 1.40226C0.96208 1.84256 0.714722 2.43974 0.714722 3.06242C0.714722 3.68509 0.96208 4.28227 1.40238 4.72257L10.6797 13.9999L1.40238 23.2773C0.96208 23.7176 0.714722 24.3147 0.714722 24.9374C0.714722 25.5601 0.96208 26.1573 1.40238 26.5976C1.84268 27.0379 2.43986 27.2852 3.06254 27.2852C3.68522 27.2852 4.28239 27.0379 4.72269 26.5976L14 17.3202L23.2774 26.5976C23.7177 27.0379 24.3149 27.2852 24.9375 27.2852C25.5602 27.2852 26.1574 27.0379 26.5977 26.5976C27.038 26.1573 27.2854 25.5601 27.2854 24.9374C27.2854 24.3147 27.038 23.7176 26.5977 23.2773L17.3145 13.9999Z"
+					/>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<!-- Open Modal Button -->
+	<button id="modal-btn" class="border bg-blue-400 py-2 px-4 text-white">
+		Open Modal
+	</button>
+</div>
+<!-- [END] HTML Modal -->
+
+<!-- [START] JavaScript Modal -->
+<script>
+	function toggleModal(btnId, modalId, closeBtnId) {
+		const modal = document.getElementById(modalId)
+		const btn = document.getElementById(btnId)
+		const close = document.getElementById(closeBtnId)
+		const body = document.querySelector('body')
+
+		btn.addEventListener('click', () => {
+			modal.classList.toggle('hidden')
+			modal.classList.toggle('flex')
+			body.classList.toggle('overflow-hidden')
+		})
+
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal) {
+				modal.classList.toggle('hidden')
+				modal.classList.toggle('flex')
+				body.classList.toggle('overflow-hidden')
+			}
+		})
+
+		close.addEventListener('click', () => {
+			modal.classList.toggle('hidden')
+			modal.classList.toggle('flex')
+			body.classList.toggle('overflow-hidden')
+		})
+	}
+	toggleModal('modal-btn', 'modal', 'close-btn')
+</script>
+<!-- [END] JavaScript Modal -->

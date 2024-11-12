@@ -1,0 +1,41 @@
+<!-- HTML DarkMode Switcher -->
+<label class="relative flex h-[30px] w-[70px] cursor-pointer">
+	<input id="mode-btn" class="hidden" type="checkbox" name="switch" />
+	<div
+		class="after:content absolute bottom-0 left-0 right-0 top-0 rounded-3xl bg-blue-400 after:absolute after:left-[5px] after:top-[5px] after:h-5 after:w-5 after:rounded-full after:bg-slate-100 after:transition-transform after:duration-300 dark:bg-slate-700 dark:after:translate-x-10 dark:after:bg-slate-200"
+	></div>
+</label>
+<!-- END HTML DarkMode Switcher -->
+
+<!-- JavaScript DarkMode Switcher -->
+<script>
+	function toggleDarkMode() {
+		// Dark Mode
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) &&
+				window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark')
+		} else {
+			document.documentElement.classList.remove('dark')
+		}
+
+		// Указать ID кнопки при клике на которую будет переключаться тема
+		const modeBtn = document.querySelector('#mode-btn')
+
+		modeBtn.addEventListener('click', () => {
+			document.querySelector('html').classList.toggle('dark')
+
+			if (document.querySelector('html').classList.contains('dark')) {
+				localStorage.theme = 'dark'
+			} else {
+				localStorage.theme = 'light'
+			}
+		})
+	}
+
+	toggleDarkMode()
+</script>
+<!-- END JavaScript DarkMode Switcher -->

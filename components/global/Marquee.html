@@ -1,0 +1,95 @@
+<!-- [START] HTML Marquee -->
+<div>
+	<div class="marquee">
+		<ul class="marquee__content marquee__content-right">
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+		</ul>
+		<!-- Mirrors the content above -->
+		<ul class="marquee__content marquee__content-right" aria-hidden="true">
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+		</ul>
+	</div>
+	<div class="marquee">
+		<ul class="marquee__content marquee__content-left">
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+		</ul>
+		<!-- Mirrors the content above -->
+		<ul class="marquee__content marquee__content-left" aria-hidden="true">
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+			<li>Software engineers</li>
+			<li>DevOps</li>
+			<li>Full Stack Javascript Engineer</li>
+			<li>QA Engineer</li>
+		</ul>
+	</div>
+</div>
+<!-- [END] HTML Marquee -->
+
+<!-- CSS  -->
+<style>
+	/* Marquee */
+	.marquee {
+		--gap: 50px;
+		display: flex;
+		overflow: hidden;
+		gap: var(--gap);
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		padding: 10px 0;
+	}
+	.marquee__content {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: space-around;
+		font-size: 30px;
+		min-width: 100%;
+		gap: var(--gap);
+		list-style: none;
+	}
+	.marquee__content-left {
+		animation: 30s scrollToLeft infinite linear;
+	}
+	.marquee__content-right {
+		animation: 30s scrollToRight infinite linear reverse;
+	}
+	@keyframes scrollToLeft {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
+	@keyframes scrollToRight {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
+</style>
