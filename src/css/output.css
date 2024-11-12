@@ -933,10 +933,6 @@ h2 {
   display: none;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
 .h-5 {
   height: 1.25rem;
 }
@@ -957,16 +953,16 @@ h2 {
   min-height: 100%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .w-\[30px\] {
   width: 30px;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .min-w-max {
@@ -976,6 +972,10 @@ h2 {
 
 .max-w-\[200px\] {
   max-width: 200px;
+}
+
+.max-w-\[430px\] {
+  max-width: 430px;
 }
 
 .max-w-\[452px\] {
@@ -989,10 +989,6 @@ h2 {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[430px\] {
-  max-width: 430px;
 }
 
 .flex-auto {
@@ -1055,6 +1051,10 @@ h2 {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
@@ -1107,9 +1107,18 @@ h2 {
   border-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-secondary-200 {
   --tw-border-opacity: 1;
   border-color: rgb(234 234 234 / var(--tw-border-opacity));
+}
+
+.border-t-\[\#F4F4F4\] {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(244 244 244 / var(--tw-border-opacity));
 }
 
 .bg-orange-200 {
@@ -1120,11 +1129,6 @@ h2 {
 .bg-secondary-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(79 100 125 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1261,6 +1265,11 @@ h2 {
   color: rgb(39 50 70 / var(--tw-text-opacity));
 }
 
+.text-violet-400 {
+  --tw-text-opacity: 1;
+  color: rgb(149 108 255 / var(--tw-text-opacity));
+}
+
 .text-violet-500 {
   --tw-text-opacity: 1;
   color: rgb(110 65 226 / var(--tw-text-opacity));
@@ -1269,11 +1278,6 @@ h2 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-violet-400 {
-  --tw-text-opacity: 1;
-  color: rgb(149 108 255 / var(--tw-text-opacity));
 }
 
 .shadow-dropdown {
@@ -1363,6 +1367,11 @@ h2 {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.hover\:text-secondary-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(79 100 125 / var(--tw-text-opacity));
 }
 
 .hover\:text-secondary-800:hover {
@@ -1487,5 +1496,29 @@ h2 {
 
   .sm\:gap-5 {
     gap: 1.25rem;
+  }
+}
+
+@media (max-width: 479.99px) {
+  .xs\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .xs\:items-start {
+    align-items: flex-start;
+  }
+
+  .xs\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .xs\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .xs\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
