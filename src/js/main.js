@@ -1,3 +1,4 @@
+// ============ GLOBAL Scripts ============
 // Mobile Menu Burger
 function burgerMenu() {
 	const menu = document.querySelector('#mobile-menu')
@@ -22,7 +23,6 @@ function burgerMenu() {
 	})
 }
 burgerMenu()
-
 function toggleSubmenu() {
 	const submenuTriggers = document.querySelectorAll('.with-submenu')
 
@@ -36,4 +36,42 @@ function toggleSubmenu() {
 }
 toggleSubmenu()
 
-// Animated Tabs
+// ============ PRICE PAGE Scripts ============
+if (document.getElementById('toggle-price-btn')) {
+	// Toggle Price
+	function togglePrice() {
+		const btn = document.getElementById('toggle-price-btn')
+		const items = document.querySelectorAll('.toggle-button')
+		const bussinessPriceItem = document.getElementById('bussiness-price')
+		const enterprisePriceItem = document.getElementById('enterprise-price')
+
+		const prices = {
+			bussiness: {
+				monthly: 49,
+				yearly: 399,
+			},
+			enterprise: {
+				monthly: 149,
+				yearly: 999,
+			},
+		}
+
+		let isYearly = false
+
+		btn.addEventListener('click', () => {
+			isYearly = !isYearly
+
+			items.forEach((item) => item.classList.toggle('active'))
+
+			bussinessPriceItem.innerText = isYearly
+				? prices.bussiness.yearly
+				: prices.bussiness.monthly
+			enterprisePriceItem.innerText = isYearly
+				? prices.enterprise.yearly
+				: prices.enterprise.monthly
+		})
+	}
+
+	// Inits
+	togglePrice()
+}

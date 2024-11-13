@@ -29,8 +29,8 @@
 		@apply border-secondary-100 bg-white text-secondary-600 hover:bg-gray-100;
 	}
 
-	/* Section Title */
-	.section-title {
-		@apply text-3xl font-semibold leading-normal text-black md:text-2xl sm:text-xl;
+	/* Toggler Button */
+	.toggle-button.active {
+		@apply bg-white;
 	}
 }

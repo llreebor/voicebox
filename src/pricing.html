@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Voicebox | Home</title>
+		<title>Voicebox | Pricing</title>
 		<link rel="stylesheet" href="./css/output.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -255,243 +255,309 @@
 			</header>
 			<!-- Main Content -->
 			<main class="flex-auto">
-				<!-- Home -->
-				<section class="py-20 md:py-10">
+				<!-- Pricing -->
+				<section>
 					<div class="container">
-						<div class="flex flex-col items-center gap-5">
-							<p
-								class="flex items-center gap-3 rounded-full bg-orange-200 p-3 text-sm tracking-sm text-orange-500"
+						<div
+							class="flex items-end justify-between xs:flex-col xs:items-start xs:gap-5"
+						>
+							<!-- [START] Section Header -->
+							<div class="w-2/3">
+								<h2>Simple, transparent pricing</h2>
+								<p class="font-medium text-secondary-300">
+									Risk free, cancel at any time
+								</p>
+							</div>
+							<!-- [END] Section Header -->
+							<!-- Tabs toggler -->
+							<button
+								id="toggle-price-btn"
+								class="flex items-center rounded-lg bg-[#EEE] p-1 xs:w-full xs:grid-cols-2"
 							>
-								<img src="./img/icons/orange-star.svg" alt="star icon" />
-								Create surveys and understand your responses with AI
-							</p>
-							<h2 class="max-w-[452px] text-center">
-								Create surveys with AI and collect insights from your
-								<span
-									class="relative px-1 text-violet-500 after:absolute after:-bottom-1 after:left-0 after:right-1 after:top-1 after:-z-10 after:w-full after:rounded after:bg-violet-200"
+								<div
+									class="toggle-button active group pointer-events-none rounded-lg p-2 xs:w-full"
 								>
-									cust
-								</span>
-							</h2>
+									<p
+										class="text-sm text-[#77779A] group-[.active]:text-[#1A1919]"
+									>
+										Monthly
+									</p>
+								</div>
+								<div
+									class="toggle-button group pointer-events-none rounded-lg p-2 xs:w-full"
+								>
+									<p
+										class="text-sm text-[#77779A] group-[.active]:text-[#1A1919]"
+									>
+										Annually
+									</p>
+								</div>
+							</button>
+						</div>
 
+						<!-- Pricing Cards -->
+						<div
+							class="mt-10 grid grid-cols-3 items-start gap-10 md:grid-cols-2 md:gap-5 sm:grid-cols-1"
+						>
+							<!-- Card -->
 							<div
-								class="flex items-center gap-10 md:gap-5 sm:mt-10 sm:flex-col sm:gap-3"
+								class="shadow-price-card space-y-5 rounded-lg border border-[#ECECF4] p-8 sm:space-y-4 sm:p-6"
 							>
-								<a href="#" class="btn">Create your account</a>
-								<a href="#" class="btn btn-outline">Demo Survey</a>
-							</div>
+								<div>
+									<p
+										class="text-xl font-semibold leading-normal tracking-[0.4px] text-secondary-800"
+									>
+										Basic
+									</p>
+									<p class="text-secondary-250 text-sm">
+										Great for small teams/audiences
+									</p>
+								</div>
+								<p class="text-[42px] font-bold tracking-[0.84px] sm:text-3xl">
+									Free
+								</p>
 
-							<p class="text-sm font-medium tracking-sm text-secondary-300">
-								Get up to 150 responses a month for free
-							</p>
+								<ul class="space-y-4 sm:space-y-3">
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">150 responses a month</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Unlimited surveys</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Unlimited questions</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Unlimited team members</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Free forever</p>
+									</li>
+								</ul>
+
+								<a href="#" class="btn">Get Started</a>
+							</div>
+							<!-- Card -->
+							<div
+								class="shadow-price-card space-y-5 rounded-lg border border-[#ECECF4] p-8 sm:space-y-4 sm:p-6"
+							>
+								<div>
+									<p
+										class="text-xl font-semibold leading-normal tracking-[0.4px] text-secondary-800"
+									>
+										Business
+									</p>
+									<p class="text-secondary-250 text-sm">
+										Great for small teams/audiences
+									</p>
+								</div>
+								<p class="text-[42px] font-bold tracking-[0.84px] sm:text-3xl">
+									$<span id="bussiness-price" class="animate-fadeIn">49</span>
+									<span class="-ml-3 text-base font-normal text-[#9A9DAB]">
+										/mo
+									</span>
+								</p>
+
+								<ul class="space-y-4 sm:space-y-3">
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">2,000 responses a month</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Unlimited surveys</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Unlimited questions</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Unlimited team members</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Custom domain</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/blue-check.svg" alt="check icon" />
+										<p class="text-secondary-50">Whitelabel solution</p>
+									</li>
+								</ul>
+
+								<a href="#" class="btn">Get Started</a>
+							</div>
+							<!-- Card -->
+							<div
+								class="shadow-price-card bg-primary-900 space-y-5 rounded-lg border border-[#ECECF4] p-8 md:col-span-2 sm:col-span-1 sm:space-y-4 sm:p-6"
+							>
+								<div>
+									<p
+										class="text-xl font-semibold leading-normal tracking-[0.4px] text-white"
+									>
+										Enterprise
+									</p>
+									<p class="text-sm text-pink-200">
+										Great for small teams/audiences
+									</p>
+								</div>
+								<p
+									class="text-[42px] font-bold tracking-[0.84px] text-white sm:text-3xl"
+								>
+									$<span id="enterprise-price" class="animate-fadeIn">149</span>
+									<span class="-ml-3 text-base font-normal text-[#9A9DAB]">
+										/mo
+									</span>
+								</p>
+
+								<ul class="space-y-4 sm:space-y-3">
+									<li class="flex gap-2">
+										<img src="./img/icons/pink-check.svg" alt="check icon" />
+										<p class="text-orange-100">20,000 responses a month</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/pink-check.svg" alt="check icon" />
+										<p class="text-orange-100">Unlimited surveys</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/pink-check.svg" alt="check icon" />
+										<p class="text-orange-100">Unlimited questions</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/pink-check.svg" alt="check icon" />
+										<p class="text-orange-100">Unlimited team members</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/pink-check.svg" alt="check icon" />
+										<p class="text-orange-100">Custom domain</p>
+									</li>
+									<li class="flex gap-2">
+										<img src="./img/icons/pink-check.svg" alt="check icon" />
+										<p class="text-orange-100">Whitelabel solution</p>
+									</li>
+								</ul>
+
+								<a
+									href="#"
+									class="btn border-pink-500 bg-pink-500 hover:border-pink-600 hover:bg-pink-600"
+								>
+									Get Started
+								</a>
+							</div>
+						</div>
+
+						<div
+							class="mt-4 flex items-center justify-end gap-1 sm:flex-col sm:justify-center"
+						>
+							<p class="text-sm text-[#878787]">Need more responses ?</p>
+							<a
+								href="#"
+								class="text-sm font-medium text-[#3D3D3D] underline-offset-4 hover:text-slate-900 hover:underline"
+							>
+								Speak to the team
+							</a>
 						</div>
 					</div>
 				</section>
 
-				<!-- Survey Types -->
-				<section>
+				<!-- FAQ -->
+				<section class="pb-20">
 					<div class="container">
-						<!-- [START] Section Header -->
-						<div class="w-2/3">
-							<span class="font-semibold text-pink-400">Surveys</span>
-							<h2>Survey types.</h2>
-							<p class="font-medium text-secondary-300">
-								At Voicebox, we offer a variety of survey types to ensure that
-								you receive the most accurate and valuable feedback from your
-								audience.
-							</p>
-						</div>
-						<!-- [END] Section Header -->
+						<h2>Frequently asked questions</h2>
+
 						<div
-							class="mt-10 grid grid-cols-3 gap-10 sm:mt-5 sm:grid-cols-1 sm:gap-5"
+							class="mt-10 grid grid-cols-2 gap-20 md:gap-10 sm:grid-cols-1 sm:gap-5"
 						>
-							<div class="col-span-2 space-y-2 sm:col-span-1">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-md.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Question types</p>
+							<div class="space-y-2">
+								<p class="text-xl tracking-[0.4px] text-primary-800">
+									Do you offer a free trial?
+								</p>
+								<p class="text-secondary-300">
+									We don’t offer a free trial but we do have a free plan where
+									you get 150 responses every month. This should be enough for
+									you to try out Voicebox.
+								</p>
 							</div>
 							<div class="space-y-2">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-sm.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">White label</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Survey Result -->
-				<section>
-					<div class="container">
-						<!-- [START] Section Header -->
-						<div class="w-2/3">
-							<h2>Survey that get results.</h2>
-							<p class="font-medium text-secondary-300">
-								Get the insights you need with our results-driven surveys.
-								Designed for accuracy, our surveys empower you to make informed
-								decisions and achieve your goals.
-							</p>
-						</div>
-						<!-- [END] Section Header -->
-						<div class="mt-10 sm:mt-5">
-							<div class="col-span-2 space-y-2 sm:col-span-1">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-lg.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Question types</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- AI -->
-				<section>
-					<div class="container">
-						<!-- [START] Section Header -->
-						<div class="w-2/3">
-							<span class="font-semibold text-primary-400">
-								Artificial intelligence
-							</span>
-							<h2>Advanced AI integration.</h2>
-							<p class="font-medium text-secondary-300">
-								At Voicebox, we offer a variety of survey types to ensure that
-								you receive the most accurate and valuable feedback from your
-								audience.
-							</p>
-						</div>
-						<!-- [END] Section Header -->
-						<div
-							class="mt-10 grid grid-cols-3 gap-10 sm:mt-5 sm:grid-cols-1 sm:gap-5"
-						>
-							<div class="col-span-2 space-y-2 sm:col-span-1">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-md.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Question types</p>
+								<p class="text-xl tracking-[0.4px] text-primary-800">
+									Do I need a credit card for the free basic plan?
+								</p>
+								<p class="text-secondary-300">
+									No, we don’t ask for any payment details for our basic plan,
+									you’ll only be prompted to upgrade if you exceed 150 responses
+									in a month.
+								</p>
 							</div>
 							<div class="space-y-2">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-sm.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">White label</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Responses -->
-				<section>
-					<div class="container">
-						<!-- [START] Section Header -->
-						<div class="w-2/3">
-							<span class="font-semibold text-orange-400">Responses</span>
-							<h2>Understand the responses you get.</h2>
-							<p class="font-medium text-secondary-300">
-								Uncover the full story behind your survey responses with our
-								response analysis. Gain valuable insights into your audience and
-								make informed decisions with confidence.
-							</p>
-						</div>
-						<!-- [END] Section Header -->
-						<div class="mt-10 sm:mt-5">
-							<div class="col-span-2 space-y-2 sm:col-span-1">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-lg.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Question types</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Stats -->
-				<section>
-					<div class="container">
-						<!-- [START] Section Header -->
-						<div class="w-2/3">
-							<span class="font-semibold text-green-400">Stats</span>
-							<h2>Overall engagement per survey & question.</h2>
-							<p class="font-medium text-secondary-300">
-								Measure engagement levels and uncover hidden insights with our
-								comprehensive survey reporting. Our platform provides you with a
-								clear view of overall engagement per survey and question.
-							</p>
-						</div>
-						<!-- [END] Section Header -->
-						<div class="mt-10 sm:mt-5">
-							<div class="col-span-2 space-y-2 sm:col-span-1">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-lg.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Question types</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- More -->
-				<section>
-					<div class="container">
-						<!-- [START] Section Header -->
-						<div class="w-2/3">
-							<span class="font-semibold text-violet-400">Surveys</span>
-							<h2>Additional features.</h2>
-							<p class="font-medium text-secondary-300">
-								Customize your survey experience with our branding options,
-								including custom domains and white-label surveys. Collaborate
-								with your team effortlessly and manage your surveys with ease.
-							</p>
-						</div>
-						<!-- [END] Section Header -->
-						<div
-							class="mt-10 grid grid-cols-3 gap-10 sm:mt-5 sm:grid-cols-1 sm:gap-5"
-						>
-							<div class="col-span-2 space-y-2 sm:col-span-1">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-md.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Custom domain</p>
+								<p class="text-xl tracking-[0.4px] text-primary-800">
+									Can I cancel at any time?
+								</p>
+								<p class="text-secondary-300">
+									Absolutely, you can cancel your plan at anytime, without
+									issue. We’ve made cancelling your plan as simple as possible.
+								</p>
 							</div>
 							<div class="space-y-2">
-								<img
-									class="h-auto w-full max-w-full"
-									src="./img/home/placeholder-sm.png"
-									alt="image"
-								/>
-								<p class="text-sm text-secondary-500">Unlimited team members</p>
+								<p class="text-xl tracking-[0.4px] text-primary-800">
+									Are payments secure?
+								</p>
+								<p class="text-secondary-300">
+									All payments are completely secure. We use 
+									<a
+										href="#"
+										class="text-primary-500 underline-offset-4 hover:text-primary-400 hover:underline"
+									>
+										Stripe
+									</a>
+									 as our payment system. You can find out more about Stripe’s
+									security features 
+									<a
+										href="#"
+										class="text-primary-500 underline-offset-4 hover:text-primary-400 hover:underline"
+									>
+										here
+									</a>
+									.
+								</p>
+							</div>
+							<div class="space-y-2">
+								<p class="text-xl tracking-[0.4px] text-primary-800">
+									Can I upgrade my plan?
+								</p>
+								<p class="text-secondary-300">
+									Sure, you will only need to do this if you get more responses
+									than your plan allows or if you want to use our custom
+									domain/white label features.
+								</p>
+							</div>
+							<div class="space-y-2">
+								<p class="text-xl tracking-[0.4px] text-primary-800">
+									Can I pay annually?
+								</p>
+								<p class="text-secondary-300">
+									Unfortunately we don’t offer annual billing right now, but we
+									do plan on adding this in the near future.
+								</p>
 							</div>
 						</div>
 					</div>
 				</section>
 
 				<!-- CTA -->
-				<section class="py-20">
+				<section class="bg-[#FBFBFB] py-20">
 					<div class="container">
-						<div
-							class="mx-auto flex max-w-[430px] flex-col items-center space-y-5"
-						>
-							<h2 class="text-center">Ready to start creating surveys?</h2>
-							<p class="text-center text-sm tracking-sm text-secondary-300">
-								Get up to 150 responses a month for free
+						<div class="flex flex-col space-y-5">
+							<h2>Do you have any questions?</h2>
+							<p class="text-sm tracking-sm text-secondary-300">
+								If you have any questions about our team features or plans,
+								please get in touch.
 							</p>
-							<a href="#" class="btn">Create your account</a>
+							<a href="#" class="btn max-w-fit xs:max-w-full">Get in touch</a>
 						</div>
 					</div>
 				</section>

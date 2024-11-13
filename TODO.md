@@ -1,4 +1,4 @@
 # TODO
 
-- Setup Tailwind Prettier
-- Change Wayyy to Voicebox
+- Change COmpany Name to Voicebox
+- Pricing tabs toggler
