@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="h-full" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Voicebox | Pricing</title>
+		<link rel="stylesheet" href="./css/output.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="h-full">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Header -->
+			<header class="py-[18px] shadow-header">
+				<div class="container">
+					<div class="flex items-center">
+						<a href=" #">
+							<img src="./img/global/logo.png" alt="logo" />
+						</a>
+						<!-- Desktop menu -->
+						<nav
+							id="menu"
+							class="z-10 ml-20 flex animate-fadeIn md:ml-8 md:gap-8 sm:hidden sm:flex-col sm:items-center sm:justify-center"
+						>
+							<ul class="flex items-center gap-10">
+								<!-- Menu Item -->
+								<li>
+									<a
+										href="#"
+										class="py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
+									>
+										<span>Features</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
+									>
+										<span>Pricing</span>
+									</a>
+								</li>
+								<!-- Menu Item With Submenu -->
+								<li
+									class="group relative cursor-pointer py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
+								>
+									<a href="#" class="flex items-center gap-2">
+										<span>More</span>
+										<svg
+											class="transition-transform group-hover:rotate-180"
+											xmlns="http://www.w3.org/2000/svg"
+											width="15"
+											height="8"
+											viewBox="0 0 15 8"
+											fill="none"
+										>
+											<path
+												class="group-hover:stroke-secondary-800"
+												d="M13.3334 1L7.33337 7L1.33337 1"
+												stroke="#9597B2"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+
+										<!-- SUbmenu | Dropdown -->
+										<ul
+											class="absolute left-0 top-full hidden min-w-max rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
+										>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Inner Link 1
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Inner Link 2
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Inner Link 3
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Inner Link 4
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Inner Link 5
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Inner Link 6
+												</a>
+											</li>
+										</ul>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<!-- Mobile menu -->
+						<nav
+							id="mobile-menu"
+							class="fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto bg-secondary-700 py-4"
+						>
+							<ul class="flex flex-col items-center justify-center gap-10">
+								<li>
+									<a href="#" class="text-3xl text-white">Features</a>
+								</li>
+
+								<li>
+									<a href="#" class="text-3xl text-white">Pricing</a>
+								</li>
+
+								<!-- Menu Item With Submenu -->
+								<li
+									class="with-submenu group relative text-3xl text-white transition-colors"
+								>
+									<div class="flex flex-col items-center justify-center gap-2">
+										<!-- Submenu Trigger -->
+										<button
+											class="submenu-trigger flex max-w-fit items-center justify-center gap-2"
+										>
+											<span class="pointer-events-none">More</span>
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												class="pointer-events-none transition-transform group-[.active]:rotate-180"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M7 10L12 15L17 10"
+													stroke="white"
+													stroke-opacity="1"
+													stroke-width="3"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</button>
+
+										<!-- Submenu Content -->
+										<div
+											class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
+										>
+											<div class="overflow-hidden">
+												<ul class="space-y-2 p-4">
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 1
+														</a>
+													</li>
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 2
+														</a>
+													</li>
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 3
+														</a>
+													</li>
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 4
+														</a>
+													</li>
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 5
+														</a>
+													</li>
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 6
+														</a>
+													</li>
+													<li>
+														<a class="flex px-3 py-1 text-xl" href="#">
+															Inner Link 7
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<div
+								class="flex w-full max-w-[200px] flex-col items-center gap-3"
+							>
+								<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
+								<a href="#" class="btn w-full max-w-full">
+									Create your account
+								</a>
+							</div>
+						</nav>
+
+						<!-- Buttons -->
+						<div class="ml-auto flex items-center gap-10 md:gap-5 sm:hidden">
+							<a href="#" class="btn btn-outline">Login</a>
+							<a href="#" class="btn">Create your account</a>
+						</div>
+
+						<!-- Burger Button -->
+						<button
+							id="burger"
+							class="group relative z-20 hidden h-5 w-[30px] sm:ml-auto sm:block"
+						>
+							<span
+								class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
+							></span>
+							<span
+								class="absolute left-0 top-1/2 flex h-[2px] w-[30px] -translate-y-1/2 translate-x-0 bg-secondary-700 transition-transform group-[.active]:opacity-0"
+							></span>
+							<span
+								class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45 group-[.active]:bg-white"
+							></span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<!-- Main Content -->
+			<main class="flex-auto">
+				<!-- Contacts -->
+				<section class="py-20">
+					<div class="container">
+						<div class="mx-auto max-w-[656px]">
+							<!-- [START] Section Header -->
+							<div>
+								<h2>Get in touch</h2>
+								<p class="font-medium text-[#8B8B8B]">
+									Please feel free to send us any questions, feedback or
+									suggestions you might have.
+								</p>
+							</div>
+							<!-- [END] Section Header -->
+
+							<!-- Form -->
+							<form action="#" class="mt-10 space-y-5">
+								<label for="topic">
+									Choose a topic
+									<select name="topic" id="topic" class="input">
+										<option value="value1">General Topic</option>
+										<option value="value2">Random Text 1</option>
+										<option value="value3">Random Text 2</option>
+										<option value="value4">Random Text 3</option>
+										<option value="value5">Random Text 4</option>
+										<option value="value6">Random Text 5</option>
+									</select>
+								</label>
+
+								<div class="grid grid-cols-2 gap-5 xs:grid-cols-1">
+									<label for="first_name">
+										First Name
+										<input
+											type="text"
+											class="input"
+											id="first_name"
+											placeholder="First Name"
+										/>
+									</label>
+									<label for="last_name">
+										Last Name
+										<input
+											type="text"
+											class="input"
+											id="last_name"
+											placeholder="Last Name"
+										/>
+									</label>
+								</div>
+
+								<label for="email">
+									Email address
+									<input
+										type="email"
+										class="input"
+										id="email"
+										placeholder="Email address"
+									/>
+								</label>
+
+								<label for="message">
+									Message
+									<textarea
+										class="input min-h-[150px] resize-none"
+										name="message"
+										id="message"
+										placeholder="Enter your question, feedback or suggestions..."
+									></textarea>
+								</label>
+
+								<button type="submit" class="btn">Send Message</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<!-- Footer -->
+			<footer class="border-t border-t-[#F4F4F4] py-20 xs:py-10">
+				<div class="container">
+					<div
+						class="flex items-center justify-between xs:flex-col-reverse xs:items-start xs:gap-10"
+					>
+						<div class="space-y-5">
+							<a href="#"><img src="./img/global/logo.png" alt="logo" /></a>
+							<p class="text-secondary-300">© 2024</p>
+						</div>
+						<div class="flex gap-10">
+							<nav>
+								<ul class="space-y-5">
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Pricing
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Demo
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Blog
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											About Us
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Brand
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<nav>
+								<ul class="space-y-5">
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Contact Us
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Terms of use
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Privacy policy
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+										>
+											Cookie policy
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>

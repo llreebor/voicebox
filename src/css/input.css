@@ -18,6 +18,9 @@
 	h2 {
 		@apply text-4xl font-bold leading-normal tracking-lg sm:text-3xl sm:leading-tight;
 	}
+	label {
+		@apply flex flex-col gap-2 font-medium text-[#757575];
+	}
 }
 
 @layer components {
@@ -27,6 +30,11 @@
 	}
 	.btn.btn-outline {
 		@apply border-secondary-100 bg-white text-secondary-600 hover:bg-gray-100;
+	}
+
+	/* Input */
+	.input {
+		@apply rounded-lg border-[#D2D2D2] p-4 font-medium text-primary-800 shadow-header placeholder:text-[#BEBECD];
 	}
 
 	/* Toggler Button */
