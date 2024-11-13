@@ -24,6 +24,13 @@
 }
 
 @layer components {
+	/* Menu Link */
+	.menu-link {
+		@apply hover:text-primary-600 font-medium text-secondary-400 transition-colors;
+	}
+	.menu-link.active {
+		@apply text-primary-600;
+	}
 	/* Button */
 	.btn {
 		@apply flex items-center justify-center gap-2 rounded-lg border border-primary-400 bg-primary-400 px-4 py-3 font-semibold text-white hover:border-primary-500 hover:bg-primary-500;

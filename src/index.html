@@ -17,240 +17,230 @@
 	<body class="h-full">
 		<div class="wrapper flex min-h-full flex-col">
 			<!-- Header -->
-			<header class="py-[18px] shadow-header">
-				<div class="container">
-					<div class="flex items-center">
-						<a href=" #">
-							<img src="./img/global/logo.png" alt="logo" />
-						</a>
-						<!-- Desktop menu -->
-						<nav
-							id="menu"
-							class="z-10 ml-20 flex animate-fadeIn md:ml-8 md:gap-8 sm:hidden sm:flex-col sm:items-center sm:justify-center"
-						>
-							<ul class="flex items-center gap-10">
-								<!-- Menu Item -->
-								<li>
-									<a
-										href="#"
-										class="py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
+			<header class="px-5 py-[18px] shadow-header">
+				<div class="flex items-center">
+					<a href=" #">
+						<img src="./img/global/logo.png" alt="logo" />
+					</a>
+					<!-- Desktop menu -->
+					<nav
+						id="menu"
+						class="z-10 ml-20 flex animate-fadeIn md:ml-8 md:gap-8 sm:hidden sm:flex-col sm:items-center sm:justify-center"
+					>
+						<ul class="flex items-center gap-10">
+							<!-- Menu Item -->
+							<li>
+								<a href="#" class="menu-link py-5">
+									<span>Features</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="menu-link py-5">
+									<span>Pricing</span>
+								</a>
+							</li>
+							<!-- Menu Item With Submenu -->
+							<li
+								class="menu-link group relative cursor-pointer py-5 font-medium text-secondary-400 transition-colors"
+							>
+								<a href="#" class="flex items-center gap-2">
+									<span>More</span>
+									<svg
+										class="transition-transform group-hover:rotate-180"
+										xmlns="http://www.w3.org/2000/svg"
+										width="15"
+										height="8"
+										viewBox="0 0 15 8"
+										fill="none"
 									>
-										<span>Features</span>
-									</a>
-								</li>
-								<li>
-									<a
-										href="#"
-										class="py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
+										<path
+											class="group-hover:stroke-primary-600"
+											d="M13.3334 1L7.33337 7L1.33337 1"
+											stroke="#9597B2"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+
+									<!-- SUbmenu | Dropdown -->
+									<ul
+										class="absolute left-0 top-full hidden min-w-max rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
 									>
-										<span>Pricing</span>
-									</a>
-								</li>
-								<!-- Menu Item With Submenu -->
-								<li
-									class="group relative cursor-pointer py-5 font-medium text-secondary-400 transition-colors hover:text-secondary-800"
-								>
-									<a href="#" class="flex items-center gap-2">
-										<span>More</span>
+										<li>
+											<a
+												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+												href="#"
+											>
+												Inner Link 1
+											</a>
+										</li>
+										<li>
+											<a
+												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+												href="#"
+											>
+												Inner Link 2
+											</a>
+										</li>
+										<li>
+											<a
+												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+												href="#"
+											>
+												Inner Link 3
+											</a>
+										</li>
+										<li>
+											<a
+												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+												href="#"
+											>
+												Inner Link 4
+											</a>
+										</li>
+										<li>
+											<a
+												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+												href="#"
+											>
+												Inner Link 5
+											</a>
+										</li>
+										<li>
+											<a
+												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+												href="#"
+											>
+												Inner Link 6
+											</a>
+										</li>
+									</ul>
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<!-- Mobile menu -->
+					<nav
+						id="mobile-menu"
+						class="fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto bg-secondary-700 py-4"
+					>
+						<ul class="flex flex-col items-center justify-center gap-10">
+							<li>
+								<a href="#" class="text-3xl text-white">Features</a>
+							</li>
+
+							<li>
+								<a href="#" class="text-3xl text-white">Pricing</a>
+							</li>
+
+							<!-- Menu Item With Submenu -->
+							<li
+								class="with-submenu group relative text-3xl text-white transition-colors"
+							>
+								<div class="flex flex-col items-center justify-center gap-2">
+									<!-- Submenu Trigger -->
+									<button
+										class="submenu-trigger flex max-w-fit items-center justify-center gap-2"
+									>
+										<span class="pointer-events-none">More</span>
 										<svg
-											class="transition-transform group-hover:rotate-180"
-											xmlns="http://www.w3.org/2000/svg"
-											width="15"
-											height="8"
-											viewBox="0 0 15 8"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
 											fill="none"
+											class="pointer-events-none transition-transform group-[.active]:rotate-180"
+											xmlns="http://www.w3.org/2000/svg"
 										>
 											<path
-												class="group-hover:stroke-secondary-800"
-												d="M13.3334 1L7.33337 7L1.33337 1"
-												stroke="#9597B2"
-												stroke-width="2"
+												d="M7 10L12 15L17 10"
+												stroke="white"
+												stroke-opacity="1"
+												stroke-width="3"
 												stroke-linecap="round"
 												stroke-linejoin="round"
 											/>
 										</svg>
+									</button>
 
-										<!-- SUbmenu | Dropdown -->
-										<ul
-											class="absolute left-0 top-full hidden min-w-max rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
-										>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Inner Link 1
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Inner Link 2
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Inner Link 3
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Inner Link 4
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Inner Link 5
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Inner Link 6
-												</a>
-											</li>
-										</ul>
-									</a>
-								</li>
-							</ul>
-						</nav>
-
-						<!-- Mobile menu -->
-						<nav
-							id="mobile-menu"
-							class="fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto bg-secondary-700 py-4"
-						>
-							<ul class="flex flex-col items-center justify-center gap-10">
-								<li>
-									<a href="#" class="text-3xl text-white">Features</a>
-								</li>
-
-								<li>
-									<a href="#" class="text-3xl text-white">Pricing</a>
-								</li>
-
-								<!-- Menu Item With Submenu -->
-								<li
-									class="with-submenu group relative text-3xl text-white transition-colors"
-								>
-									<div class="flex flex-col items-center justify-center gap-2">
-										<!-- Submenu Trigger -->
-										<button
-											class="submenu-trigger flex max-w-fit items-center justify-center gap-2"
-										>
-											<span class="pointer-events-none">More</span>
-											<svg
-												width="24"
-												height="24"
-												viewBox="0 0 24 24"
-												fill="none"
-												class="pointer-events-none transition-transform group-[.active]:rotate-180"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M7 10L12 15L17 10"
-													stroke="white"
-													stroke-opacity="1"
-													stroke-width="3"
-													stroke-linecap="round"
-													stroke-linejoin="round"
-												/>
-											</svg>
-										</button>
-
-										<!-- Submenu Content -->
-										<div
-											class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
-										>
-											<div class="overflow-hidden">
-												<ul class="space-y-2 p-4">
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 1
-														</a>
-													</li>
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 2
-														</a>
-													</li>
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 3
-														</a>
-													</li>
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 4
-														</a>
-													</li>
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 5
-														</a>
-													</li>
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 6
-														</a>
-													</li>
-													<li>
-														<a class="flex px-3 py-1 text-xl" href="#">
-															Inner Link 7
-														</a>
-													</li>
-												</ul>
-											</div>
+									<!-- Submenu Content -->
+									<div
+										class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
+									>
+										<div class="overflow-hidden">
+											<ul class="space-y-2 p-4">
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 1
+													</a>
+												</li>
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 2
+													</a>
+												</li>
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 3
+													</a>
+												</li>
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 4
+													</a>
+												</li>
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 5
+													</a>
+												</li>
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 6
+													</a>
+												</li>
+												<li>
+													<a class="flex px-3 py-1 text-xl" href="#">
+														Inner Link 7
+													</a>
+												</li>
+											</ul>
 										</div>
 									</div>
-								</li>
-							</ul>
+								</div>
+							</li>
+						</ul>
 
-							<div
-								class="flex w-full max-w-[200px] flex-col items-center gap-3"
-							>
-								<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
-								<a href="#" class="btn w-full max-w-full">
-									Create your account
-								</a>
-							</div>
-						</nav>
-
-						<!-- Buttons -->
-						<div class="ml-auto flex items-center gap-10 md:gap-5 sm:hidden">
-							<a href="#" class="btn btn-outline">Login</a>
-							<a href="#" class="btn">Create your account</a>
+						<div class="flex w-full max-w-[200px] flex-col items-center gap-3">
+							<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
+							<a href="#" class="btn w-full max-w-full">
+								Create your account
+							</a>
 						</div>
+					</nav>
 
-						<!-- Burger Button -->
-						<button
-							id="burger"
-							class="group relative z-20 hidden h-5 w-[30px] sm:ml-auto sm:block"
-						>
-							<span
-								class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
-							></span>
-							<span
-								class="absolute left-0 top-1/2 flex h-[2px] w-[30px] -translate-y-1/2 translate-x-0 bg-secondary-700 transition-transform group-[.active]:opacity-0"
-							></span>
-							<span
-								class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45 group-[.active]:bg-white"
-							></span>
-						</button>
+					<!-- Buttons -->
+					<div class="ml-auto flex items-center gap-10 md:gap-5 sm:hidden">
+						<a href="#" class="btn btn-outline">Login</a>
+						<a href="#" class="btn">Create your account</a>
 					</div>
+
+					<!-- Burger Button -->
+					<button
+						id="burger"
+						class="group relative z-20 hidden h-5 w-[30px] sm:ml-auto sm:block"
+					>
+						<span
+							class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
+						></span>
+						<span
+							class="absolute left-0 top-1/2 flex h-[2px] w-[30px] -translate-y-1/2 translate-x-0 bg-secondary-700 transition-transform group-[.active]:opacity-0"
+						></span>
+						<span
+							class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45 group-[.active]:bg-white"
+						></span>
+					</button>
 				</div>
 			</header>
 			<!-- Main Content -->
