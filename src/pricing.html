@@ -121,104 +121,136 @@
 						</ul>
 					</nav>
 
-					<!-- Mobile menu -->
-					<nav
+					<!--  Mobile menu -->
+					<div
 						id="mobile-menu"
-						class="fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto bg-secondary-700 py-4"
+						class="mobile-menu group fixed -left-full top-0 z-10 h-full w-full animate-fadeIn bg-black/70"
 					>
-						<ul class="flex flex-col items-center justify-center gap-10">
-							<li>
-								<a href="#" class="text-3xl text-white">Features</a>
-							</li>
-
-							<li>
-								<a href="#" class="text-3xl text-white">Pricing</a>
-							</li>
-
-							<!-- Menu Item With Submenu -->
-							<li
-								class="with-submenu group relative text-3xl text-white transition-colors"
-							>
-								<div class="flex flex-col items-center justify-center gap-2">
-									<!-- Submenu Trigger -->
-									<button
-										class="submenu-trigger flex max-w-fit items-center justify-center gap-2"
-									>
-										<span class="pointer-events-none">More</span>
-										<svg
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-											class="pointer-events-none transition-transform group-[.active]:rotate-180"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M7 10L12 15L17 10"
-												stroke="white"
-												stroke-opacity="1"
-												stroke-width="3"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-									</button>
-
-									<!-- Submenu Content -->
-									<div
-										class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
-									>
-										<div class="overflow-hidden">
-											<ul class="space-y-2 p-4">
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 1
-													</a>
-												</li>
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 2
-													</a>
-												</li>
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 3
-													</a>
-												</li>
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 4
-													</a>
-												</li>
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 5
-													</a>
-												</li>
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 6
-													</a>
-												</li>
-												<li>
-													<a class="flex px-3 py-1 text-xl" href="#">
-														Inner Link 7
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-
-						<div class="flex w-full max-w-[200px] flex-col items-center gap-3">
-							<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
-							<a href="#" class="btn w-full max-w-full">
-								Create your account
+						<div
+							class="flex h-full w-0 flex-col space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
+						>
+							<a href="#">
+								<img src="./img/global/logo-small.png" alt="logo" />
 							</a>
+
+							<nav class="flex-1">
+								<ul class="divide-y divide-gray-200">
+									<li class="py-4">
+										<a
+											href="#"
+											class="menu-link text-xl text-primary-900 hover:text-current"
+										>
+											Features
+										</a>
+									</li>
+									<li class="py-4">
+										<a
+											href="#"
+											class="menu-link text-xl text-primary-900 hover:text-current"
+										>
+											Pricing
+										</a>
+									</li>
+
+									<!-- Menu Item With Submenu -->
+									<li
+										class="with-submenu menu-link group relative py-4 text-xl text-primary-900 hover:text-current"
+									>
+										<div class="flex flex-col gap-2">
+											<!-- Submenu Trigger -->
+											<button
+												class="submenu-trigger flex items-center justify-between gap-2"
+											>
+												<span class="pointer-events-none">More</span>
+												<svg
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													class="pointer-events-none transition-transform group-[.active]:rotate-180"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M7 10L12 15L17 10"
+														stroke="#121826"
+														stroke-opacity="1"
+														stroke-width="3"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+													/>
+												</svg>
+											</button>
+
+											<!-- Submenu Content -->
+											<div
+												class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
+											>
+												<div class="overflow-hidden">
+													<ul class="space-y-2">
+														<li>
+															<a
+																href="#"
+																class="flex px-4 py-2 text-lg hover:text-primary-900"
+															>
+																Survey settings
+															</a>
+														</li>
+														<li>
+															<a
+																href="#"
+																class="flex px-4 py-2 text-lg hover:text-primary-900"
+															>
+																Custom domain
+															</a>
+														</li>
+														<li>
+															<a
+																href="#"
+																class="flex px-4 py-2 text-lg hover:text-primary-900"
+															>
+																Company details
+															</a>
+														</li>
+														<li>
+															<a
+																href="#"
+																class="flex px-4 py-2 text-lg hover:text-primary-900"
+															>
+																Manage team
+															</a>
+														</li>
+														<li>
+															<a
+																href="#"
+																class="flex px-4 py-2 text-lg hover:text-primary-900"
+															>
+																Join team link
+															</a>
+														</li>
+														<li>
+															<a
+																href="#"
+																class="flex px-4 py-2 text-lg hover:text-primary-900"
+															>
+																Plans
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</nav>
+
+							<div class="grid w-full grid-cols-2 gap-3 pt-6 sm:grid-cols-1">
+								<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
+								<a href="#" class="btn w-full max-w-full">
+									Create your account
+								</a>
+							</div>
 						</div>
-					</nav>
+					</div>
 
 					<!-- Buttons -->
 					<div class="ml-auto flex items-center gap-10 md:gap-5 sm:hidden">
@@ -347,7 +379,8 @@
 									</p>
 								</div>
 								<p class="text-[42px] font-bold tracking-[0.84px] sm:text-3xl">
-									$<span id="bussiness-price" class="animate-fadeIn">49</span>
+									$
+									<span id="bussiness-price" class="animate-fadeIn">49</span>
 									<span class="-ml-3 text-base font-normal text-[#9A9DAB]">
 										/mo
 									</span>
@@ -399,7 +432,8 @@
 								<p
 									class="text-[42px] font-bold tracking-[0.84px] text-white sm:text-3xl"
 								>
-									$<span id="enterprise-price" class="animate-fadeIn">149</span>
+									$
+									<span id="enterprise-price" class="animate-fadeIn">149</span>
 									<span class="-ml-3 text-base font-normal text-[#9A9DAB]">
 										/mo
 									</span>

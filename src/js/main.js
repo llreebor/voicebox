@@ -7,16 +7,22 @@ function burgerMenu() {
 
 	burger.addEventListener('click', () => {
 		burger.classList.toggle('active')
-		menu.classList.toggle('hidden')
-		menu.classList.toggle('flex')
+		menu.classList.toggle('open')
 		body.classList.toggle('overflow-hidden')
+	})
+
+	menu.addEventListener('click', (e) => {
+		if (e.target.classList.contains('mobile-menu')) {
+			menu.classList.remove('open')
+			burger.classList.remove('active')
+			body.classList.remove('overflow-hidden')
+		}
 	})
 
 	// Вот тут мы ставим брейкпоинт навбара
 	window.addEventListener('resize', () => {
 		if (window.innerWidth > 991.98) {
-			menu.classList.add('hidden')
-			menu.classList.remove('flex')
+			menu.classList.remove('open')
 			burger.classList.remove('active')
 			body.classList.remove('overflow-hidden')
 		}

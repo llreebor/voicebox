@@ -26,10 +26,10 @@
 @layer components {
 	/* Menu Link */
 	.menu-link {
-		@apply hover:text-primary-600 font-medium text-secondary-400 transition-colors;
+		@apply font-medium text-secondary-400 transition-colors hover:text-primary-600;
 	}
 	.menu-link.active {
-		@apply text-primary-600;
+		@apply text-primary-600 md:text-current;
 	}
 	/* Button */
 	.btn {
@@ -52,5 +52,10 @@
 	/* Select */
 	.select.active {
 		@apply ring-2 ring-[#2563eb];
+	}
+
+	/* Mobile Menu */
+	.mobile-menu.open {
+		@apply left-0;
 	}
 }

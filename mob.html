@@ -1,0 +1,93 @@
+<nav
+	id="mobile-menu"
+	class="fixed left-0 top-0 z-10 hidden h-full w-full flex-col items-center justify-center gap-8 overflow-auto bg-secondary-700 py-4"
+>
+	<ul class="flex flex-col items-center justify-center gap-10">
+		<li>
+			<a href="#" class="text-3xl text-white">Dashboards</a>
+		</li>
+
+		<li>
+			<a href="#" class="text-3xl text-white">Surveys</a>
+		</li>
+
+		<li>
+			<a href="#" class="text-3xl text-white">Responses</a>
+		</li>
+
+		<li>
+			<a href="#" class="flex items-center gap-2 text-3xl text-white">
+				AI
+				<span
+					class="rounded bg-[#F9F0EE] px-1 py-[3px] text-xs uppercase text-[#B73B7E]"
+				>
+					beta
+				</span>
+			</a>
+		</li>
+
+		<!-- Menu Item With Submenu -->
+		<li
+			class="with-submenu group relative text-3xl text-white transition-colors"
+		>
+			<div class="flex flex-col items-center justify-center gap-2">
+				<!-- Submenu Trigger -->
+				<button
+					class="submenu-trigger flex max-w-fit items-center justify-center gap-2"
+				>
+					<span class="pointer-events-none">Account</span>
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						class="pointer-events-none transition-transform group-[.active]:rotate-180"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M7 10L12 15L17 10"
+							stroke="white"
+							stroke-opacity="1"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+
+				<!-- Submenu Content -->
+				<div
+					class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
+				>
+					<div class="overflow-hidden">
+						<ul class="space-y-2 p-4">
+							<li>
+								<a class="flex px-3 py-1 text-xl" href="#">Survey settings</a>
+							</li>
+							<li>
+								<a class="flex px-3 py-1 text-xl" href="#">Custom domain</a>
+							</li>
+							<li>
+								<a class="flex px-3 py-1 text-xl" href="#">Company details</a>
+							</li>
+							<li>
+								<a class="flex px-3 py-1 text-xl" href="#">Manage team</a>
+							</li>
+							<li>
+								<a class="flex px-3 py-1 text-xl" href="#">Join team link</a>
+							</li>
+							<li>
+								<a class="flex px-3 py-1 text-xl" href="#">Plans</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<div class="flex w-full max-w-[200px] flex-col items-center gap-3">
+		<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
+		<a href="#" class="btn w-full max-w-full">Create your account</a>
+	</div>
+</nav>
