@@ -36,9 +36,47 @@ function toggleSubmenu() {
 }
 toggleSubmenu()
 
+// Custom Select
+// init when you need ex. initializeCustomSelect('select', 'options', 'selected-option')
+function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
+	const customSelect = document.getElementById(selectId)
+	const selectedOption = document.getElementById(selectedOptionId)
+	const customOptions = document.getElementById(optionsId)
+	const options = customOptions.getElementsByClassName('option')
+
+	customSelect.addEventListener('click', () => {
+		customSelect.classList.toggle('active')
+		customOptions.classList.toggle('hidden')
+		const arrow = customSelect.querySelector('.arrow svg')
+		arrow.style.transform = customOptions.classList.contains('hidden')
+			? 'rotate(0deg)'
+			: 'rotate(180deg)'
+	})
+
+	for (let option of options) {
+		option.addEventListener('click', () => {
+			selectedOption.innerText = option.innerText
+			customOptions.classList.add('hidden')
+			customSelect.classList.remove('active')
+			const arrow = customSelect.querySelector('.arrow svg')
+			arrow.style.transform = 'rotate(0deg)'
+		})
+	}
+
+	document.addEventListener('click', (event) => {
+		const target = event.target
+		if (!customSelect.contains(target) && !customOptions.contains(target)) {
+			customSelect.classList.remove('active')
+			customOptions.classList.add('hidden')
+			const arrow = customSelect.querySelector('.arrow svg')
+			arrow.style.transform = 'rotate(0deg)'
+		}
+	})
+}
+
 // ============ PRICE PAGE Scripts ============
+// Toggle Price
 if (document.getElementById('toggle-price-btn')) {
-	// Toggle Price
 	function togglePrice() {
 		const btn = document.getElementById('toggle-price-btn')
 		const items = document.querySelectorAll('.toggle-button')
@@ -71,7 +109,14 @@ if (document.getElementById('toggle-price-btn')) {
 				: prices.enterprise.monthly
 		})
 	}
-
-	// Inits
 	togglePrice()
+}
+
+// ============ CONTACTS PAGE Scripts ============
+if (document.getElementById('question-select')) {
+	initializeCustomSelect(
+		'question-select',
+		'question-options',
+		'question-selected-option',
+	)
 }

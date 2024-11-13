@@ -271,7 +271,67 @@
 
 							<!-- Form -->
 							<form action="#" class="mt-10 space-y-5">
-								<label for="topic">
+								<!-- [START] HTML Select  -->
+								<div class="relative">
+									<div
+										id="question-select"
+										class="input select flex cursor-pointer border focus:border-primary-400"
+									>
+										<span id="question-selected-option">General Question</span>
+
+										<div
+											class="arrow absolute right-3 top-1/2 -translate-y-1/2"
+										>
+											<svg
+												class="transition-transform"
+												xmlns="http://www.w3.org/2000/svg"
+												width="13"
+												height="8"
+												viewBox="0 0 13 8"
+												fill="none"
+											>
+												<path
+													d="M7.34756 7.60953C6.87901 8.13016 6.11807 8.13016 5.64952 7.60953L0.85152 2.27828C0.506664 1.89509 0.405456 1.32448 0.592878 0.824679C0.7803 0.324874 1.21512 0 1.70242 0H11.2984C11.782 0 12.2205 0.324874 12.408 0.824679C12.5954 1.32448 12.4904 1.89509 12.1493 2.27828L7.35131 7.60953H7.34756Z"
+													fill="#565D64"
+												/>
+											</svg>
+										</div>
+									</div>
+									<div
+										id="question-options"
+										class="absolute z-10 mt-1 hidden min-w-full transform overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-in-out"
+									>
+										<ul class="grid">
+											<li
+												class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+											>
+												Random Value 1
+											</li>
+											<li
+												class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+											>
+												Random Value 2
+											</li>
+											<li
+												class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+											>
+												Random Value 6
+											</li>
+											<li
+												class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+											>
+												Random Value 4
+											</li>
+											<li
+												class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+											>
+												Random Value 5
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- [END] HTML Select  -->
+								<!-- <label for="topic">
 									Choose a topic
 									<select name="topic" id="topic" class="input">
 										<option value="value1">General Topic</option>
@@ -281,7 +341,7 @@
 										<option value="value5">Random Text 4</option>
 										<option value="value6">Random Text 5</option>
 									</select>
-								</label>
+								</label> -->
 
 								<div class="grid grid-cols-2 gap-5 xs:grid-cols-1">
 									<label for="first_name">
@@ -330,6 +390,8 @@
 					</div>
 				</section>
 			</main>
+
+			<div class="container"></div>
 
 			<!-- Footer -->
 			<footer class="border-t border-t-[#F4F4F4] py-20 xs:py-10">
