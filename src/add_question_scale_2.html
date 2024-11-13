@@ -341,47 +341,159 @@
 			</header>
 			<!-- Main Content -->
 			<main class="flex-auto">
-				<!-- Survay -->
+				<!-- Form -->
 				<section>
 					<div class="container">
-						<!-- [START] Section Header -->
-						<div>
-							<span
-								class="rounded-lg bg-[#EFEFEF] px-2 py-1 text-sm font-medium text-[#090909]"
-							>
-								Draft
-							</span>
-							<h2 class="mb-2 mt-4">New Feature Survey</h2>
-							<p class="font-medium text-[#8B8B8B]">
-								This survey is designed to collect feedback on a new feature
-								recently added to the site. Through the survey, we aim to
-								understand users’ experience with the new feature and gather
-								opinions on how to best optimize the feature for users. The
-								survey will provide website developers with valuable insights on
-								how to best optimize the feature for users.
-							</p>
-							<a
-								href="#"
-								class="btn shadow-button mt-5 max-w-fit border-[#E3EADE] bg-green-100 text-green-500 hover:border-[#E3EADE] hover:bg-green-200"
-							>
-								Enable Survey
-							</a>
-						</div>
-						<!-- [END] Section Header -->
-					</div>
-				</section>
+						<div class="mx-auto w-full max-w-[970px]">
+							<div class="flex justify-between gap-10">
+								<h2>Question 1</h2>
+								<p class="text-sm text-[#8B8B8B]">New Feature Survey</p>
+							</div>
 
-				<!-- CTA -->
-				<section class="bg-[#FCFCFC]">
-					<div class="container">
-						<div class="mx-auto flex flex-col items-center space-y-5">
-							<h2 class="text-center">
-								Let’s add some questions to your survey
-							</h2>
-							<p class="text-center text-sm tracking-sm text-secondary-300">
-								Click the button below to get your survey up and running.
-							</p>
-							<a href="#" class="btn">Add a question</a>
+							<form
+								action="#"
+								class="shadow-form mt-5 space-y-5 rounded-2xl border border-[#ECECEC] p-10 sm:p-5"
+							>
+								<label for="question">
+									Question
+									<input
+										type="text"
+										class="input"
+										id="question"
+										placeholder="Question"
+									/>
+								</label>
+
+								<div class="grid grid-cols-2 gap-5 sm:grid-cols-1">
+									<!-- [START] HTML Select  -->
+									<label>
+										Question type
+										<div class="relative">
+											<div
+												id="question-type-select"
+												class="input select flex cursor-pointer border focus:border-primary-400"
+											>
+												<span id="question-type-selected-option">
+													Choose a question type
+												</span>
+
+												<div
+													class="arrow absolute right-3 top-1/2 -translate-y-1/2"
+												>
+													<svg
+														class="transition-transform"
+														xmlns="http://www.w3.org/2000/svg"
+														width="13"
+														height="8"
+														viewBox="0 0 13 8"
+														fill="none"
+													>
+														<path
+															d="M7.34756 7.60953C6.87901 8.13016 6.11807 8.13016 5.64952 7.60953L0.85152 2.27828C0.506664 1.89509 0.405456 1.32448 0.592878 0.824679C0.7803 0.324874 1.21512 0 1.70242 0H11.2984C11.782 0 12.2205 0.324874 12.408 0.824679C12.5954 1.32448 12.4904 1.89509 12.1493 2.27828L7.35131 7.60953H7.34756Z"
+															fill="#565D64"
+														/>
+													</svg>
+												</div>
+											</div>
+											<div
+												id="question-type-options"
+												class="absolute z-10 mt-1 hidden min-w-full transform overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-in-out"
+											>
+												<ul class="grid">
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Choose a question type
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Random Value 2
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Random Value 6
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Random Value 4
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Random Value 5
+													</li>
+												</ul>
+											</div>
+										</div>
+									</label>
+									<!-- [END] HTML Select  -->
+
+									<!-- [START] HTML Select  -->
+									<label>
+										Can this question be skipped
+										<div class="relative">
+											<div
+												id="question-skip-select"
+												class="input select flex cursor-pointer border focus:border-primary-400"
+											>
+												<span id="question-skip-selected-option">No</span>
+
+												<div
+													class="arrow absolute right-3 top-1/2 -translate-y-1/2"
+												>
+													<svg
+														class="transition-transform"
+														xmlns="http://www.w3.org/2000/svg"
+														width="13"
+														height="8"
+														viewBox="0 0 13 8"
+														fill="none"
+													>
+														<path
+															d="M7.34756 7.60953C6.87901 8.13016 6.11807 8.13016 5.64952 7.60953L0.85152 2.27828C0.506664 1.89509 0.405456 1.32448 0.592878 0.824679C0.7803 0.324874 1.21512 0 1.70242 0H11.2984C11.782 0 12.2205 0.324874 12.408 0.824679C12.5954 1.32448 12.4904 1.89509 12.1493 2.27828L7.35131 7.60953H7.34756Z"
+															fill="#565D64"
+														/>
+													</svg>
+												</div>
+											</div>
+											<div
+												id="question-skip-options"
+												class="absolute z-10 mt-1 hidden min-w-full transform overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-in-out"
+											>
+												<ul class="grid">
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														No
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Yes
+													</li>
+												</ul>
+											</div>
+										</div>
+									</label>
+									<!-- [END] HTML Select  -->
+								</div>
+
+								<label>
+									Message
+									<div
+										class="flex h-[300px] w-full items-center justify-center rounded-xl border border-[#EEE] bg-[#FCFCFC] p-5"
+									>
+										<p class="text-center font-normal text-[#BEBECD]">
+											Your survey question will show here
+										</p>
+									</div>
+								</label>
+
+								<button type="submit" class="btn">Save Changes</button>
+							</form>
 						</div>
 					</div>
 				</section>

@@ -118,11 +118,25 @@ if (document.getElementById('toggle-price-btn')) {
 	togglePrice()
 }
 
-// ============ CONTACTS PAGE Scripts ============
+// ============ SELECTS Inits ============
 if (document.getElementById('question-select')) {
 	initializeCustomSelect(
 		'question-select',
 		'question-options',
 		'question-selected-option',
+	)
+}
+if (document.getElementById('question-type-select')) {
+	initializeCustomSelect(
+		'question-type-select',
+		'question-type-options',
+		'question-type-selected-option',
+	)
+}
+if (document.getElementById('question-skip-select')) {
+	initializeCustomSelect(
+		'question-skip-select',
+		'question-skip-options',
+		'question-skip-selected-option',
 	)
 }

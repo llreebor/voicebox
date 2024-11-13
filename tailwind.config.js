@@ -56,13 +56,19 @@ module.exports = {
 					500: '#FE0496',
 				},
 				green: {
+					100: '#EEFBE4',
+					200: '#C9E8B2',
 					400: '#2ECB71',
+					500: '#59843A',
+					600: '#517B32',
 				},
 			},
 			boxShadow: {
 				header: '0px 2px 8px 0px rgba(0, 0, 0, 0.08)',
 				dropdown: '0px 2px 8px 0px rgba(0, 0, 0, 0.04)',
 				'price-card': '0px 1px 4px 0px rgba(0, 0, 0, 0.08)',
+				button: '0px 1px 1px 0px rgba(0, 0, 0, 0.08);',
+				form: '0px 1px 16px 0px rgba(0, 0, 0, 0.04);',
 			},
 			letterSpacing: {
 				sm: '0.28px',

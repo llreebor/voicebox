@@ -10,7 +10,7 @@
 		@apply relative tracking-md;
 	}
 	section {
-		@apply py-10;
+		@apply py-20 sm:py-10;
 	}
 	p {
 		@apply font-medium;
@@ -41,7 +41,7 @@
 
 	/* Input */
 	.input {
-		@apply rounded-lg border-[#D2D2D2] p-4 font-medium text-primary-800 shadow-header placeholder:text-[#BEBECD];
+		@apply rounded-lg border border-[#D2D2D2] p-4 font-medium text-primary-800 ring-[#2563eb] placeholder:text-[#BEBECD];
 	}
 
 	/* Toggler Button */
