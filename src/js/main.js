@@ -28,7 +28,6 @@ function burgerMenu() {
 		}
 	})
 }
-burgerMenu()
 function toggleSubmenu() {
 	const submenuTriggers = document.querySelectorAll('.with-submenu')
 
@@ -40,7 +39,10 @@ function toggleSubmenu() {
 		})
 	})
 }
-toggleSubmenu()
+if (document.getElementById('mobile-menu')) {
+	burgerMenu()
+	toggleSubmenu()
+}
 
 // Custom Select
 // init when you need ex. initializeCustomSelect('select', 'options', 'selected-option')
