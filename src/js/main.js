@@ -80,7 +80,7 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	})
 }
 
-// ============ PRICE PAGE Scripts ============
+// =============== TOGGLE ===============
 // Toggle Price
 if (document.getElementById('toggle-price-btn')) {
 	function togglePrice() {
@@ -102,7 +102,8 @@ if (document.getElementById('toggle-price-btn')) {
 
 		let isYearly = false
 
-		btn.addEventListener('click', () => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault()
 			isYearly = !isYearly
 
 			items.forEach((item) => item.classList.toggle('active'))
@@ -113,6 +114,21 @@ if (document.getElementById('toggle-price-btn')) {
 			enterprisePriceItem.innerText = isYearly
 				? prices.enterprise.yearly
 				: prices.enterprise.monthly
+		})
+	}
+	togglePrice()
+}
+// Toggle Preview
+if (document.getElementById('toggle-preview-btn')) {
+	function togglePrice() {
+		const btn = document.getElementById('toggle-preview-btn')
+		const items = document.querySelectorAll('.toggle-button')
+		const result = document.getElementById('preview-result')
+
+		btn.addEventListener('click', (e) => {
+			e.preventDefault()
+			items.forEach((item) => item.classList.toggle('active'))
+			result.classList.toggle('flex-col')
 		})
 	}
 	togglePrice()
@@ -165,5 +181,6 @@ function toggleTabs(tabsId) {
 	})
 }
 
-// ID of the main tab block
-toggleTabs('tabs-surveys')
+if (document.getElementById('tabs-surveys')) {
+	toggleTabs('tabs-surveys')
+}
