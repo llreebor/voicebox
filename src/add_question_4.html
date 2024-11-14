@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Voicebox | Contacts</title>
+		<title>Voicebox</title>
 		<link rel="stylesheet" href="./css/output.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
 	<body class="h-full">
 		<div class="wrapper flex min-h-full flex-col">
 			<!-- Header -->
-			<header class="px-5 py-[18px] shadow-header">
+			<header class="z-10 px-5 py-[18px] shadow-header">
 				<div class="flex items-center">
 					<a href=" #">
 						<img src="./img/global/logo-small.png" alt="logo" />
@@ -584,7 +584,9 @@
 								</div>
 
 								<!-- Buttons -->
-								<div class="flex gap-5 py-5">
+								<div
+									class="flex gap-5 py-5 sm:grid sm:grid-cols-2 xs:grid-cols-1"
+								>
 									<button
 										class="btn border-[#DCDCDC] bg-[#F9F9F9] text-[#393939] shadow-[0px_1px_1px_0px_rgba(0,0,0,0.08)] hover:border-[#DCDCDC] hover:bg-gray-200"
 									>

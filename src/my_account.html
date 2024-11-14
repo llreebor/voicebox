@@ -17,34 +17,49 @@
 	<body class="h-full">
 		<div class="wrapper flex min-h-full flex-col">
 			<!-- Header -->
-			<header class="px-5 py-[18px] shadow-header">
+			<header class="z-10 px-5 py-[18px] shadow-header">
 				<div class="flex items-center">
 					<a href=" #">
-						<img src="./img/global/logo.png" alt="logo" />
+						<img src="./img/global/logo-small.png" alt="logo" />
 					</a>
 					<!-- Desktop menu -->
-					<nav
-						id="menu"
-						class="z-10 ml-20 flex animate-fadeIn md:ml-8 md:gap-8 sm:hidden sm:flex-col sm:items-center sm:justify-center"
-					>
+					<nav id="menu" class="z-10 ml-20 flex animate-fadeIn md:hidden">
 						<ul class="flex items-center gap-10">
 							<!-- Menu Item -->
 							<li>
 								<a href="#" class="menu-link py-5">
-									<span>Features</span>
+									<span>Dashboards</span>
 								</a>
 							</li>
+							<!-- Menu Item -->
 							<li>
 								<a href="#" class="menu-link py-5">
-									<span>Pricing</span>
+									<span>Surveys</span>
+								</a>
+							</li>
+							<!-- Menu Item -->
+							<li>
+								<a href="#" class="menu-link py-5">
+									<span>Responses</span>
+								</a>
+							</li>
+							<!-- Menu Item -->
+							<li>
+								<a href="#" class="menu-link py-5">
+									<span class="flex items-center gap-2">
+										AI
+										<span
+											class="rounded bg-[#F9F0EE] px-1 py-[3px] text-xs uppercase text-[#B73B7E]"
+										>
+											beta
+										</span>
+									</span>
 								</a>
 							</li>
 							<!-- Menu Item With Submenu -->
-							<li
-								class="menu-link group relative cursor-pointer py-5 font-medium text-secondary-400 transition-colors"
-							>
+							<li class="menu-link group relative cursor-pointer py-5">
 								<a href="#" class="flex items-center gap-2">
-									<span>More</span>
+									<span>Account</span>
 									<svg
 										class="transition-transform group-hover:rotate-180"
 										xmlns="http://www.w3.org/2000/svg"
@@ -64,58 +79,64 @@
 									</svg>
 
 									<!-- SUbmenu | Dropdown -->
-									<ul
-										class="absolute left-0 top-full hidden min-w-max rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
+									<nav
+										class="absolute left-0 top-full hidden min-w-max divide-y divide-secondary-200 overflow-hidden rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
 									>
-										<li>
-											<a
-												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-												href="#"
-											>
-												Inner Link 1
-											</a>
-										</li>
-										<li>
-											<a
-												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-												href="#"
-											>
-												Inner Link 2
-											</a>
-										</li>
-										<li>
-											<a
-												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-												href="#"
-											>
-												Inner Link 3
-											</a>
-										</li>
-										<li>
-											<a
-												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-												href="#"
-											>
-												Inner Link 4
-											</a>
-										</li>
-										<li>
-											<a
-												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-												href="#"
-											>
-												Inner Link 5
-											</a>
-										</li>
-										<li>
-											<a
-												class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-												href="#"
-											>
-												Inner Link 6
-											</a>
-										</li>
-									</ul>
+										<ul class="pb-3">
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Survey settings
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Custom domain
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Company details
+												</a>
+											</li>
+										</ul>
+										<ul class="py-3">
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Manage team
+												</a>
+											</li>
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Join team link
+												</a>
+											</li>
+										</ul>
+										<ul class="pt-3">
+											<li>
+												<a
+													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
+													href="#"
+												>
+													Plans
+												</a>
+											</li>
+										</ul>
+									</nav>
 								</a>
 							</li>
 						</ul>
@@ -124,23 +145,23 @@
 					<!--  Mobile menu -->
 					<div
 						id="mobile-menu"
-						class="mobile-menu group fixed -left-full top-0 z-10 h-full w-full animate-fadeIn bg-black/70"
+						class="mobile-menu group fixed -left-full top-0 h-full w-full animate-fadeIn bg-black/70"
 					>
 						<div
-							class="flex h-full w-0 flex-col space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
+							class="h-full w-0 space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
 						>
 							<a href="#">
 								<img src="./img/global/logo-small.png" alt="logo" />
 							</a>
 
-							<nav class="flex-1">
+							<nav>
 								<ul class="divide-y divide-gray-200">
 									<li class="py-4">
 										<a
 											href="#"
 											class="menu-link text-xl text-primary-900 hover:text-current"
 										>
-											Features
+											Dashboards
 										</a>
 									</li>
 									<li class="py-4">
@@ -148,7 +169,30 @@
 											href="#"
 											class="menu-link text-xl text-primary-900 hover:text-current"
 										>
-											Pricing
+											Surveys
+										</a>
+									</li>
+									<li class="py-4">
+										<a
+											href="#"
+											class="menu-link text-xl text-primary-900 hover:text-current"
+										>
+											Responses
+										</a>
+									</li>
+									<li class="py-4">
+										<a
+											href="#"
+											class="menu-link text-xl text-primary-900 hover:text-current"
+										>
+											<span class="flex items-center gap-2">
+												AI
+												<span
+													class="rounded bg-[#F9F0EE] px-1 py-[3px] text-xs uppercase text-[#B73B7E]"
+												>
+													beta
+												</span>
+											</span>
 										</a>
 									</li>
 
@@ -242,26 +286,46 @@
 									</li>
 								</ul>
 							</nav>
-
-							<div class="grid w-full grid-cols-2 gap-3 pt-6 sm:grid-cols-1">
-								<a href="#" class="btn btn-outline w-full max-w-full">Login</a>
-								<a href="#" class="btn w-full max-w-full">
-									Create your account
-								</a>
-							</div>
 						</div>
 					</div>
 
 					<!-- Buttons -->
-					<div class="ml-auto flex items-center gap-10 md:gap-5 sm:hidden">
-						<a href="#" class="btn btn-outline">Login</a>
-						<a href="#" class="btn">Create your account</a>
+					<div
+						class="ml-auto flex items-center gap-10 md:mr-10 md:gap-5 xs:mr-3"
+					>
+						<button
+							class="flex items-center gap-2 rounded-lg bg-[#EDF4FF] px-3 py-2"
+						>
+							<img src="./img/icons/heart-rate.svg" alt="icon" />
+							<p class="font-semibold text-[#3C64ED]">13</p>
+						</button>
+						<button class="group">
+							<svg
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g id="octicon:bell-16">
+									<path
+										class="group-hover:fill-primary-600"
+										id="Vector"
+										d="M16 32C16.9745 32.0003 17.9156 31.6449 18.6466 31.0005C19.3776 30.356 19.8482 29.4669 19.97 28.5C20.004 28.226 19.776 28 19.5 28H12.5C12.224 28 11.996 28.226 12.03 28.5C12.1518 29.4669 12.6224 30.356 13.3534 31.0005C14.0844 31.6449 15.0255 32.0003 16 32ZM5.99998 10C5.99998 7.34784 7.05355 4.8043 8.92892 2.92893C10.8043 1.05357 13.3478 0 16 0C18.6521 0 21.1957 1.05357 23.0711 2.92893C24.9464 4.8043 26 7.34784 26 10V15.894C26 15.9953 26.028 16.088 26.084 16.172L29.49 21.282C29.7935 21.7393 29.9675 22.2704 29.9934 22.8187C30.0193 23.367 29.8961 23.912 29.6371 24.396C29.378 24.8799 28.9926 25.2845 28.522 25.567C28.0513 25.8494 27.5129 25.9991 26.964 26H5.03598C4.48594 26.0013 3.9459 25.853 3.4737 25.5709C3.0015 25.2888 2.61493 24.8836 2.35539 24.3987C2.09585 23.9137 1.97313 23.3673 2.00036 22.8179C2.02759 22.2685 2.20376 21.7369 2.50998 21.28L5.91598 16.172C5.96982 16.0892 5.99895 15.9928 5.99998 15.894V10ZM16 3C14.1435 3 12.363 3.7375 11.0502 5.05025C9.73748 6.36301 8.99998 8.14348 8.99998 10V15.894C8.99998 16.586 8.79598 17.26 8.41198 17.834L5.00598 22.946L4.99998 22.966L5.00198 22.978C5.00198 22.982 5.00465 22.986 5.00998 22.99L5.02198 22.998L5.03598 23H26.964L26.978 22.998L26.99 22.99L26.998 22.978L27 22.964L26.994 22.944L23.588 17.836C23.2049 17.2615 23.0003 16.5865 23 15.896V10C23 8.14348 22.2625 6.36301 20.9497 5.05025C19.637 3.7375 17.8565 3 16 3Z"
+										fill="#D5D5D9"
+									/>
+								</g>
+							</svg>
+						</button>
+						<button
+							class="size-[50px] overflow-hidden rounded-full bg-secondary-100"
+						></button>
 					</div>
 
 					<!-- Burger Button -->
 					<button
 						id="burger"
-						class="group relative z-20 hidden h-5 w-[30px] sm:ml-auto sm:block"
+						class="group relative z-20 hidden h-5 w-[30px] md:block"
 					>
 						<span
 							class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
@@ -277,132 +341,97 @@
 			</header>
 			<!-- Main Content -->
 			<main class="flex-auto">
-				<!-- Policy -->
+				<!-- Form -->
 				<section>
 					<div class="container">
-						<div class="mx-auto max-w-[800px]">
-							<!-- [START] Section Header -->
-							<div>
-								<h2>Cookie Policy</h2>
-								<p class="font-medium text-[#8B8B8B]">
-									Please read this cookie policy (“cookie policy”, "policy")
-									carefully before using [website] website (“website”,
-									"service") operated by [name] ("us", 'we", "our").
-								</p>
-							</div>
-							<!-- [END] Section Header -->
+						<div class="mx-auto w-full max-w-[970px]">
+							<h2>My account</h2>
 
-							<!-- Content -->
-							<div class="mt-10 space-y-10 sm:space-y-5">
-								<div class="space-y-2">
-									<p
-										class="text-lg leading-normal tracking-[0.4px] text-[#1C2734]"
-									>
-										What are cookies?
-									</p>
-									<div class="sapce-y-10 sm:space-y-5">
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											Cookies are simple text files that are stored on your
-											computer or mobile device by a website’s server. Each
-											cookie is unique to your web browser. It will contain some
-											anonymous information such as a unique identifier,
-											website’s domain name, and some digits and numbers
-										</p>
-									</div>
+							<form
+								action="#"
+								class="mt-5 space-y-5 rounded-2xl border border-[#ECECEC] p-10 shadow-form sm:p-5"
+							>
+								<div class="grid grid-cols-2 gap-5 sm:grid-cols-1">
+									<label for="first_name">
+										First Name
+										<input
+											type="text"
+											class="input"
+											id="first_name"
+											placeholder="First Name"
+										/>
+									</label>
+
+									<label for="last_name">
+										Last Name
+										<input
+											type="text"
+											class="input"
+											id="last_name"
+											placeholder="Last Name"
+										/>
+									</label>
 								</div>
-								<div class="space-y-2">
-									<p
-										class="text-lg leading-normal tracking-[0.4px] text-[#1C2734]"
-									>
-										What types of cookies do we use?
-									</p>
-									<div class="sapce-y-10 sm:space-y-5">
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											Cookies are simple text files that are stored on your
-											computer or mobile device by a website’s server. Each
-											cookie is unique to your web browser. It will contain some
-											anonymous information such as a unique identifier,
-											website’s domain name, and some digits and numbers
-										</p>
+
+								<label for="job_title">
+									Job Title
+									<input
+										type="text"
+										class="input"
+										id="job_title"
+										placeholder="Job Title"
+									/>
+								</label>
+
+								<label for="email">
+									Email address
+									<input
+										type="email"
+										class="input"
+										id="email"
+										placeholder="Email address"
+									/>
+								</label>
+
+								<label for="profile_pic" class="flex cursor-pointer gap-4">
+									Add your profile pic
+									<input type="file" class="hidden" id="profile_pic" />
+									<div class="flex gap-6 xs:flex-col">
+										<div class="relative xs:max-w-fit">
+											<div
+												class="size-20 overflow-hidden rounded-full bg-[#DDD]"
+											>
+												<img src="./img/icons/avatar.svg" alt="avatar" />
+											</div>
+											<button
+												type="button"
+												class="pointer-events-none absolute right-0 top-0"
+											>
+												<img src="./img/icons/pen-icon.svg" alt="icon" />
+											</button>
+										</div>
+										<div>
+											<p class="text-xl text-[#2A3851]">
+												Upload your profile pic
+											</p>
+											<p class="text-[#A5A5A5]">
+												Square/circular icons work best. Minimun 256px x 256px
+											</p>
+										</div>
 									</div>
-								</div>
-								<div class="space-y-2">
-									<p
-										class="text-lg leading-normal tracking-[0.4px] text-[#1C2734]"
+								</label>
+
+								<button class="btn mt-3">Save Changes</button>
+
+								<p class="mt-16 text-[#757575]">
+									Want to change your password?
+									<a
+										href="#"
+										class="text-[#2F61B7] underline-offset-4 hover:underline"
+										>Click here</a
 									>
-										What types of cookies do we use?
-									</p>
-									<div class="space-y-10 sm:space-y-5">
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											Necessary cookies - Necessary cookies allow us to offer
-											you the best possible experience when accessing and
-											navigating through our website and using its features. For
-											example, these cookies let us recognize that you have
-											created an account and have logged into that account.
-										</p>
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											Functionality cookies - Functionality cookies let us
-											operate the site in accordance with the choices you make.
-											For example, we will recognize your username and remember
-											how you customized the site during future visits.
-										</p>
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											Analytical cookies - These cookies enable us and
-											third-party services to collect aggregated data for
-											statistical purposes on how our visitors use the website.
-											These cookies do not contain personal information such as
-											names and email addresses and are used to help us improve
-											your user experience of the website.
-										</p>
-									</div>
-								</div>
-								<div class="space-y-2">
-									<p
-										class="text-lg leading-normal tracking-[0.4px] text-[#1C2734]"
-									>
-										How to delete cookies?
-									</p>
-									<div class="sapce-y-10 sm:space-y-5">
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											If you want to restrict or block the cookies that are set
-											by our website, you can do so through your browser
-											setting. Alternatively, you can visit
-											www.internetcookies.org, which contains comprehensive
-											information on how to do this on a wide variety of
-											browsers and devices. You will find general information
-											about cookies and details on how to delete cookies from
-											your device.
-										</p>
-									</div>
-								</div>
-								<div class="space-y-2">
-									<p
-										class="text-lg leading-normal tracking-[0.4px] text-[#1C2734]"
-									>
-										Contacting us
-									</p>
-									<div class="sapce-y-10 sm:space-y-5">
-										<p
-											class="text-lg font-normal leading-normal tracking-[0.4px] text-[#4B617A]"
-										>
-											If you have any questions about this policy or our use of
-											cookies, please contact us
-										</p>
-									</div>
-								</div>
-							</div>
+								</p>
+							</form>
 						</div>
 					</div>
 				</section>
