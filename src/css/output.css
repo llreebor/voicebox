@@ -1215,6 +1215,10 @@ label {
   resize: both;
 }
 
+.list-decimal {
+  list-style-type: decimal;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1504,6 +1508,11 @@ label {
   background-color: rgb(238 251 228 / var(--tw-bg-opacity));
 }
 
+.bg-green-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 254 232 / var(--tw-bg-opacity));
+}
+
 .bg-orange-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 247 239 / var(--tw-bg-opacity));
@@ -1532,11 +1541,6 @@ label {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-green-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(223 254 232 / var(--tw-bg-opacity));
 }
 
 .p-0 {
@@ -1854,6 +1858,16 @@ label {
   color: rgb(190 190 205 / var(--tw-text-opacity));
 }
 
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-green-300 {
+  --tw-text-opacity: 1;
+  color: rgb(43 101 53 / var(--tw-text-opacity));
+}
+
 .text-green-400 {
   --tw-text-opacity: 1;
   color: rgb(46 203 113 / var(--tw-text-opacity));
@@ -1959,9 +1973,8 @@ label {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-green-300 {
-  --tw-text-opacity: 1;
-  color: rgb(43 101 53 / var(--tw-text-opacity));
+.underline {
+  text-decoration-line: underline;
 }
 
 .underline-offset-4 {
@@ -2145,6 +2158,11 @@ label {
 .hover\:text-\[\#020202\]:hover {
   --tw-text-opacity: 1;
   color: rgb(2 2 2 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .hover\:text-current:hover {
