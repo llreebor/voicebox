@@ -118,7 +118,7 @@ if (document.getElementById('toggle-price-btn')) {
 	togglePrice()
 }
 
-// ============ SELECTS Inits ============
+// ============== SELECT Inputs ==============
 if (document.getElementById('question-select')) {
 	initializeCustomSelect(
 		'question-select',
@@ -140,3 +140,30 @@ if (document.getElementById('question-skip-select')) {
 		'question-skip-selected-option',
 	)
 }
+
+// ================= Tabs =================
+function toggleTabs(tabsId) {
+	// Get main element
+	const tabs = document.getElementById(tabsId)
+	// Get all the tabs triggers and contents
+	const tabsTriggers = tabs.querySelectorAll('.tab-trigger')
+	const tabsContents = tabs.querySelectorAll('.tab-content')
+
+	// Add a click event listener to each tabs trigger
+	tabsTriggers.forEach((trigger, index) => {
+		trigger.addEventListener('click', () => {
+			// Remove the "active" class from all tabs triggers
+			tabsTriggers.forEach((t) => t.classList.remove('active'))
+			// Add the "activity" class to the clicked tabs trigger
+			trigger.classList.add('active')
+
+			// Hide all tabs contents
+			tabsContents.forEach((content) => content.classList.add('hidden'))
+			// Show the corresponding tabs content
+			tabsContents[index].classList.remove('hidden')
+		})
+	})
+}
+
+// ID of the main tab block
+toggleTabs('tabs-surveys')
