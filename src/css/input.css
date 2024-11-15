@@ -33,7 +33,7 @@
 	}
 	/* Button */
 	.btn {
-		@apply flex items-center justify-center gap-2 rounded-lg border border-primary-400 bg-primary-400 px-4 py-3 font-semibold text-white shadow-button transition-colors hover:border-primary-500 hover:bg-primary-500;
+		@apply flex items-center justify-center gap-2 rounded-lg border border-primary-500 bg-primary-500 px-4 py-3 font-semibold text-white shadow-button transition-colors hover:border-primary-400 hover:bg-primary-400;
 	}
 	.btn.btn-outline {
 		@apply border-secondary-100 bg-white text-secondary-600 hover:bg-gray-100;

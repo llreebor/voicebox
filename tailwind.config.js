@@ -71,6 +71,7 @@ module.exports = {
 				'price-card': '0px 1px 4px 0px rgba(0, 0, 0, 0.08)',
 				button: '0px 1px 1px 0px rgba(0, 0, 0, 0.08);',
 				form: '0px 1px 16px 0px rgba(0, 0, 0, 0.04);',
+				'dashboard-card': '0px 2px 12px 0px rgba(0, 0, 0, 0.08);',
 				tab: '0px 2px 4px 0px rgba(0, 0, 0, 0.08);',
 			},
 			letterSpacing: {
