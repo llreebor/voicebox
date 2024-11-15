@@ -351,7 +351,7 @@
 								class="mt-5 grid grid-cols-4 gap-5 md:grid-cols-2 xs:grid-cols-1"
 							>
 								<div
-									class="shadow-dashboard-card space-y-1 rounded-xl border border-[#EAEAEA] p-5"
+									class="space-y-1 rounded-xl border border-[#EAEAEA] p-5 shadow-dashboard-card"
 								>
 									<p class="text-sm text-[#ACB0B1]">Surveys created</p>
 									<h2>0</h2>
@@ -362,7 +362,7 @@
 								</div>
 
 								<div
-									class="shadow-dashboard-card space-y-1 rounded-xl border border-[#EAEAEA] p-5"
+									class="space-y-1 rounded-xl border border-[#EAEAEA] p-5 shadow-dashboard-card"
 								>
 									<p class="text-sm text-[#ACB0B1]">
 										Survey responses this month
@@ -375,7 +375,7 @@
 								</div>
 
 								<div
-									class="shadow-dashboard-card space-y-1 rounded-xl border border-[#EAEAEA] p-5"
+									class="space-y-1 rounded-xl border border-[#EAEAEA] p-5 shadow-dashboard-card"
 								>
 									<p class="text-sm text-[#ACB0B1]">
 										Question views last month
@@ -388,7 +388,7 @@
 								</div>
 
 								<div
-									class="shadow-dashboard-card space-y-1 rounded-xl border border-[#EAEAEA] p-5"
+									class="space-y-1 rounded-xl border border-[#EAEAEA] p-5 shadow-dashboard-card"
 								>
 									<p class="text-sm text-[#ACB0B1]">
 										Views vs question completion
@@ -401,14 +401,16 @@
 							</div>
 
 							<!-- Recent & New -->
-							<div class="mt-20 grid grid-cols-3 gap-10">
-								<div class="col-span-2 space-y-20">
+							<div
+								class="mt-20 grid grid-cols-3 gap-10 md:grid-cols-2 md:gap-5 sm:grid-cols-1"
+							>
+								<div class="col-span-2 space-y-20 md:col-span-1 md:space-y-10">
 									<div class="space-y-5">
 										<p class="text-2xl font-bold tracking-[0.48px]">
 											Recent surveys
 										</p>
 										<div
-											class="shadow-dashboard-card flex min-h-[160px] items-center justify-center rounded-lg p-5"
+											class="flex min-h-[160px] items-center justify-center rounded-lg p-5 shadow-dashboard-card"
 										>
 											<p class="text-sm text-[#858D8F]">
 												You haven’t created any surveys yet.
@@ -421,7 +423,7 @@
 											Recent responses
 										</p>
 										<div
-											class="shadow-dashboard-card flex min-h-[160px] items-center justify-center rounded-lg p-5"
+											class="flex min-h-[160px] items-center justify-center rounded-lg p-5 shadow-dashboard-card"
 										>
 											<p class="text-sm text-[#858D8F]">
 												You haven’t recieved any responses yet.
@@ -430,7 +432,7 @@
 									</div>
 								</div>
 								<div class="col-span-1">
-									<div class="shadow-dashboard-card mt-[52px] rounded-lg p-5">
+									<div class="mt-[52px] rounded-lg p-5 shadow-dashboard-card">
 										<div class="flex flex-col items-center space-y-3">
 											<img src="./img/icons/rocket.svg" alt="icon" />
 											<p class="text-xl font-semibold text-[#111F3D]">
