@@ -44,6 +44,52 @@ if (document.getElementById('mobile-menu')) {
 	toggleSubmenu()
 }
 
+// Drawer
+function toggleDrawer(triggerId, drawerId, closeBtnId) {
+	const trigger = document.getElementById(triggerId)
+	const drawer = document.getElementById(drawerId)
+	const content = drawer.querySelector('.drawer-content')
+	const closeBtn = document.getElementById(closeBtnId)
+
+	trigger.addEventListener('click', () => {
+		drawer.classList.remove('translate-x-full')
+		content.classList.remove('translate-x-full')
+
+		drawer.classList.remove('opacity-0')
+	})
+
+	closeBtn.addEventListener('click', () => {
+		drawer.classList.add('translate-x-full')
+		content.classList.add('translate-x-full')
+
+		drawer.classList.add('opacity-0')
+	})
+
+	drawer.addEventListener('click', (e) => {
+		if (e.target.classList.contains(drawerId)) {
+			drawer.classList.add('translate-x-full')
+			content.classList.add('translate-x-full')
+
+			drawer.classList.add('opacity-0')
+		}
+	})
+}
+
+// Copy to Clipboard
+function copyToClipboard() {
+	const copyText = document.getElementById('link')
+	const tooltip = document.getElementById('link-tooltip')
+
+	navigator.clipboard.writeText(copyText.textContent)
+	tooltip.classList.remove('hidden')
+	tooltip.classList.add('flex')
+
+	const interval = setInterval(() => {
+		tooltip.classList.add('hidden')
+		tooltip.classList.remove('flex')
+		clearInterval(interval)
+	}, 1000)
+}
 // Custom Select
 // init when you need ex. initializeCustomSelect('select', 'options', 'selected-option')
 function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
@@ -82,7 +128,8 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	})
 }
 
-// =============== TOGGLE ===============
+// ================= INITS =================
+// ================= Toggle ================
 // Toggle Price
 if (document.getElementById('toggle-price-btn')) {
 	function togglePrice() {
@@ -159,7 +206,7 @@ if (document.getElementById('question-skip-select')) {
 	)
 }
 
-// =================== Tabs ====================
+// ================ Tabs ==================
 function toggleTabs(tabsId) {
 	// Get main element
 	const tabs = document.getElementById(tabsId)
@@ -186,18 +233,11 @@ if (document.getElementById('tabs-surveys')) {
 	toggleTabs('tabs-surveys')
 }
 
-// ============= Copy to Clipboard =============
-function copyToClipboard() {
-	const copyText = document.getElementById('link')
-	const tooltip = document.getElementById('link-tooltip')
-
-	navigator.clipboard.writeText(copyText.textContent)
-	tooltip.classList.remove('hidden')
-	tooltip.classList.add('flex')
-
-	const interval = setInterval(() => {
-		tooltip.classList.add('hidden')
-		tooltip.classList.remove('flex')
-		clearInterval(interval)
-	}, 1000)
+// =============== Drawers ===============
+if (document.getElementById('new_survey_drawer')) {
+	toggleDrawer(
+		'new_survey_drawer_trigger',
+		'new_survey_drawer',
+		'new_survey_drawer_close',
+	)
 }
