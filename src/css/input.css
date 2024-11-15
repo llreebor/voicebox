@@ -33,10 +33,13 @@
 	}
 	/* Button */
 	.btn {
-		@apply flex items-center justify-center gap-2 rounded-lg border border-primary-400 bg-primary-400 px-4 py-3 font-semibold text-white transition-colors hover:border-primary-500 hover:bg-primary-500;
+		@apply flex items-center justify-center gap-2 rounded-lg border border-primary-400 bg-primary-400 px-4 py-3 font-semibold text-white shadow-button transition-colors hover:border-primary-500 hover:bg-primary-500;
 	}
 	.btn.btn-outline {
 		@apply border-secondary-100 bg-white text-secondary-600 hover:bg-gray-100;
+	}
+	.btn.btn-secondary {
+		@apply border-secondary-100 bg-[#F0F0F0] text-[#464855] hover:bg-gray-200;
 	}
 
 	/* Input */

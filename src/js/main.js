@@ -159,7 +159,7 @@ if (document.getElementById('question-skip-select')) {
 	)
 }
 
-// ================= Tabs =================
+// =================== Tabs ====================
 function toggleTabs(tabsId) {
 	// Get main element
 	const tabs = document.getElementById(tabsId)
@@ -182,7 +182,22 @@ function toggleTabs(tabsId) {
 		})
 	})
 }
-
 if (document.getElementById('tabs-surveys')) {
 	toggleTabs('tabs-surveys')
+}
+
+// ============= Copy to Clipboard =============
+function copyToClipboard() {
+	const copyText = document.getElementById('link')
+	const tooltip = document.getElementById('link-tooltip')
+
+	navigator.clipboard.writeText(copyText.textContent)
+	tooltip.classList.remove('hidden')
+	tooltip.classList.add('flex')
+
+	const interval = setInterval(() => {
+		tooltip.classList.add('hidden')
+		tooltip.classList.remove('flex')
+		clearInterval(interval)
+	}, 1000)
 }
