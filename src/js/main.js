@@ -293,3 +293,6 @@ if (document.getElementById('link-tooltip')) {
 if (document.getElementById('custom_url')) {
 	previewCustomUrl('custom_url', 'custom-url-result')
 }
+if (document.getElementById('custom_url_survey')) {
+	previewCustomUrl('custom_url_survey', 'custom-url-survey-result')
+}
