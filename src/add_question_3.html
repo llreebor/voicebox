@@ -523,35 +523,59 @@
 							</div>
 
 							<div class="tabs-content mt-5">
-								<!-- Tab Item -->
-								<div class="tab-content animate-fadeIn">
+								<!-- Tab Item (Overview) -->
+								<div class="tab-content animate-fadeIn space-y-5">
+									<!-- Overview item -->
 									<div
-										class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
+										class="space-y-5 divide-y divide-[#ECECEC] rounded-lg border border-[#ECECEC] bg-white p-5 shadow-tab"
 									>
-										<div class="space-y-2">
+										<div
+											class="flex items-center justify-between gap-5 pt-5 xs:flex-col"
+										>
 											<p class="text-xl font-semibold text-[#1B2B40]">
-												1. Lorem ipsum dolor sit amet consectetur adipisicing.
+												1. How satisfied are you with the new feature?
 											</p>
-											<p class="text-sm text-[#878D92]">Mood scale</p>
+											<button class="btn btn-outline xs:w-full">Summary</button>
 										</div>
-										<div class="flex gap-5 sm:ml-auto">
-											<button class="btn btn-outline px-4 py-3">Edit</button>
-											<button
-												class="btn border-[#EBE3E3] bg-[#FBF2F3] px-4 py-3 hover:border-[#EBE3E3] hover:bg-[#F9E7E9]"
-											>
-												<img src="./img/icons/red-trash.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
+										<div class="py-5">
+											<p class="text-[#878D92]">No votes yet</p>
 										</div>
 									</div>
-									<button class="btn mt-5 w-full max-w-full">
-										Add another question
-									</button>
+									<!-- Overview item -->
+									<div
+										class="space-y-5 divide-y divide-[#ECECEC] rounded-lg border border-[#ECECEC] bg-white p-5 shadow-tab"
+									>
+										<div
+											class="flex items-center justify-between gap-5 pt-5 xs:flex-col"
+										>
+											<p class="text-xl font-semibold text-[#1B2B40]">
+												2. Would you recommend this feature to a friend?
+											</p>
+											<button class="btn btn-outline xs:w-full">Summary</button>
+										</div>
+										<div class="py-5">
+											<p class="text-[#878D92]">No votes yet</p>
+										</div>
+									</div>
+									<!-- Overview item -->
+									<div
+										class="space-y-5 divide-y divide-[#ECECEC] rounded-lg border border-[#ECECEC] bg-white p-5 shadow-tab"
+									>
+										<div
+											class="flex items-center justify-between gap-5 pt-5 xs:flex-col"
+										>
+											<p class="text-xl font-semibold text-[#1B2B40]">
+												3. Which color palette do you like best?
+											</p>
+											<button class="btn btn-outline xs:w-full">Summary</button>
+										</div>
+										<div class="py-5">
+											<p class="text-[#878D92]">No votes yet</p>
+										</div>
+									</div>
 								</div>
 
-								<!-- Tab Item -->
+								<!-- Tab Item (Responses) -->
 								<div class="tab-content hidden animate-fadeIn">
 									<div
 										class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
@@ -579,7 +603,7 @@
 									</button>
 								</div>
 
-								<!-- Tab Item -->
+								<!-- Tab Item (Questions) -->
 								<div class="tab-content hidden animate-fadeIn">
 									<div
 										class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
