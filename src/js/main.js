@@ -44,6 +44,36 @@ if (document.getElementById('mobile-menu')) {
 	toggleSubmenu()
 }
 
+// Nav Stats
+function toggleNavStats(btnId, submenuId) {
+	const btn = document.getElementById(btnId)
+	const submenu = document.querySelector(submenuId)
+
+	btn.addEventListener('click', (event) => {
+		event.stopPropagation() // Prevent the click from reaching the document
+		btn.classList.toggle('active')
+	})
+
+	document.addEventListener('click', (event) => {
+		// Check if the click is outside both the button and submenu
+		if (!btn.contains(event.target) && !submenu.contains(event.target)) {
+			btn.classList.remove('active')
+		}
+	})
+}
+
+// Stats Init
+if (document.getElementById('stats-btn')) {
+	toggleNavStats('stats-btn', '.stats-submenu')
+}
+// Notification Init
+if (document.getElementById('notification-btn')) {
+	toggleNavStats('notification-btn', '.notification-submenu')
+}
+// Profile Init
+if (document.getElementById('profile-btn')) {
+	toggleNavStats('profile-btn', '.profile-submenu')
+}
 // Drawer
 function toggleDrawer(triggerId, drawerId, closeBtnId) {
 	const trigger = document.getElementById(triggerId)
