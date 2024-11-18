@@ -449,13 +449,14 @@
 									</div>
 								</div>
 							</div>
+
 							<!-- Drawer -->
 							<div
 								id="new_survey_drawer"
 								class="new_survey_drawer fixed inset-0 z-10 translate-x-full bg-[#CACBD6]/60 opacity-0"
 							>
 								<div
-									class="drawer-content ml-auto h-full w-[40%] translate-x-full bg-white p-5 transition-all md:w-[80%]"
+									class="drawer-content ml-auto h-full w-full max-w-[640px] translate-x-full bg-white p-5 transition-all md:w-[80%] sm:w-[90%]"
 								>
 									<button
 										id="new_survey_drawer_close"
@@ -474,6 +475,57 @@
 											/>
 										</svg>
 									</button>
+
+									<div
+										class="mt-10 space-y-10 pl-10 pr-5 sm:mt-0 sm:space-y-5 sm:p-0"
+									>
+										<p class="text-xl font-semibold text-[#111F3D]">
+											Create a new survey
+										</p>
+
+										<div class="space-y-5">
+											<a
+												href="#"
+												class="relative flex items-center gap-5 rounded-lg border border-[#EBEBEB] p-10 shadow-header sm:flex-col sm:items-start sm:p-5"
+											>
+												<span
+													class="absolute right-[-28px] top-[-14px] rounded-xl bg-[#2E70FA] px-2 py-1 text-sm font-bold text-white sm:-right-4"
+												>
+													BETA
+												</span>
+												<div>
+													<img src="./img/icons/robot.svg" alt="robot" />
+												</div>
+												<div class="space-y-1">
+													<p class="font-semibold">
+														Create your Survey with AI
+													</p>
+													<p class="text-sm text-[#8E949B]">
+														Give a brief description of your product and the
+														focus of your survey and let AI do the rest.
+													</p>
+												</div>
+											</a>
+
+											<a
+												href="#"
+												class="flex items-center gap-5 rounded-lg border border-[#EBEBEB] p-10 shadow-header sm:flex-col sm:items-start sm:p-5"
+											>
+												<div>
+													<img src="./img/icons/phone.svg" alt="prone" />
+												</div>
+												<div class="space-y-1">
+													<p class="font-semibold">
+														Manually create your survey
+													</p>
+													<p class="text-sm text-[#8E949B]">
+														Have full control when creating all your questions,
+														question types and survey options.
+													</p>
+												</div>
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
