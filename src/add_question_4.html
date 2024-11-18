@@ -293,33 +293,133 @@
 					<div
 						class="ml-auto flex items-center gap-10 md:mr-10 md:gap-5 xs:mr-3"
 					>
-						<button
-							class="flex items-center gap-2 rounded-lg bg-[#EDF4FF] px-3 py-2"
-						>
-							<img src="./img/icons/heart-rate.svg" alt="icon" />
-							<p class="font-semibold text-[#3C64ED]">13</p>
-						</button>
-						<button class="group">
-							<svg
-								width="32"
-								height="32"
-								viewBox="0 0 32 32"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
+						<!-- Stats Button & Dropdown -->
+						<div class="relative">
+							<button
+								id="stats-btn"
+								class="peer flex items-center gap-2 rounded-lg bg-[#EDF4FF] px-3 py-2"
 							>
-								<g id="octicon:bell-16">
-									<path
-										class="group-hover:fill-primary-600"
-										id="Vector"
-										d="M16 32C16.9745 32.0003 17.9156 31.6449 18.6466 31.0005C19.3776 30.356 19.8482 29.4669 19.97 28.5C20.004 28.226 19.776 28 19.5 28H12.5C12.224 28 11.996 28.226 12.03 28.5C12.1518 29.4669 12.6224 30.356 13.3534 31.0005C14.0844 31.6449 15.0255 32.0003 16 32ZM5.99998 10C5.99998 7.34784 7.05355 4.8043 8.92892 2.92893C10.8043 1.05357 13.3478 0 16 0C18.6521 0 21.1957 1.05357 23.0711 2.92893C24.9464 4.8043 26 7.34784 26 10V15.894C26 15.9953 26.028 16.088 26.084 16.172L29.49 21.282C29.7935 21.7393 29.9675 22.2704 29.9934 22.8187C30.0193 23.367 29.8961 23.912 29.6371 24.396C29.378 24.8799 28.9926 25.2845 28.522 25.567C28.0513 25.8494 27.5129 25.9991 26.964 26H5.03598C4.48594 26.0013 3.9459 25.853 3.4737 25.5709C3.0015 25.2888 2.61493 24.8836 2.35539 24.3987C2.09585 23.9137 1.97313 23.3673 2.00036 22.8179C2.02759 22.2685 2.20376 21.7369 2.50998 21.28L5.91598 16.172C5.96982 16.0892 5.99895 15.9928 5.99998 15.894V10ZM16 3C14.1435 3 12.363 3.7375 11.0502 5.05025C9.73748 6.36301 8.99998 8.14348 8.99998 10V15.894C8.99998 16.586 8.79598 17.26 8.41198 17.834L5.00598 22.946L4.99998 22.966L5.00198 22.978C5.00198 22.982 5.00465 22.986 5.00998 22.99L5.02198 22.998L5.03598 23H26.964L26.978 22.998L26.99 22.99L26.998 22.978L27 22.964L26.994 22.944L23.588 17.836C23.2049 17.2615 23.0003 16.5865 23 15.896V10C23 8.14348 22.2625 6.36301 20.9497 5.05025C19.637 3.7375 17.8565 3 16 3Z"
-										fill="#D5D5D9"
-									/>
-								</g>
-							</svg>
-						</button>
-						<button
-							class="size-[50px] overflow-hidden rounded-full bg-secondary-100"
-						></button>
+								<img src="./img/icons/heart-rate.svg" alt="icon" />
+								<p class="font-semibold text-[#3C64ED]">13</p>
+							</button>
+							<div
+								class="stats-submenu absolute right-0 top-full mt-5 hidden w-[308px] animate-fadeIn cursor-default rounded-lg border border-[#EAEAEA] bg-white p-5 shadow-dropdown peer-[.active]:block sm:-right-1/2 sm:w-[200px] sm:translate-x-1/2"
+							>
+								<p class="text-left text-base text-[#273246]">
+									13 survey responses collected so far this month
+								</p>
+								<p class="text-left text-sm text-[#91989A]">
+									This will reset on the 1st of September
+								</p>
+							</div>
+						</div>
+
+						<!-- Notification Button & Dropdown -->
+						<div class="relative">
+							<button
+								id="notification-btn"
+								class="peer flex items-center gap-2 rounded-lg"
+							>
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 32 32"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g id="octicon:bell-16">
+										<path
+											class="group-hover:fill-primary-600"
+											id="Vector"
+											d="M16 32C16.9745 32.0003 17.9156 31.6449 18.6466 31.0005C19.3776 30.356 19.8482 29.4669 19.97 28.5C20.004 28.226 19.776 28 19.5 28H12.5C12.224 28 11.996 28.226 12.03 28.5C12.1518 29.4669 12.6224 30.356 13.3534 31.0005C14.0844 31.6449 15.0255 32.0003 16 32ZM5.99998 10C5.99998 7.34784 7.05355 4.8043 8.92892 2.92893C10.8043 1.05357 13.3478 0 16 0C18.6521 0 21.1957 1.05357 23.0711 2.92893C24.9464 4.8043 26 7.34784 26 10V15.894C26 15.9953 26.028 16.088 26.084 16.172L29.49 21.282C29.7935 21.7393 29.9675 22.2704 29.9934 22.8187C30.0193 23.367 29.8961 23.912 29.6371 24.396C29.378 24.8799 28.9926 25.2845 28.522 25.567C28.0513 25.8494 27.5129 25.9991 26.964 26H5.03598C4.48594 26.0013 3.9459 25.853 3.4737 25.5709C3.0015 25.2888 2.61493 24.8836 2.35539 24.3987C2.09585 23.9137 1.97313 23.3673 2.00036 22.8179C2.02759 22.2685 2.20376 21.7369 2.50998 21.28L5.91598 16.172C5.96982 16.0892 5.99895 15.9928 5.99998 15.894V10ZM16 3C14.1435 3 12.363 3.7375 11.0502 5.05025C9.73748 6.36301 8.99998 8.14348 8.99998 10V15.894C8.99998 16.586 8.79598 17.26 8.41198 17.834L5.00598 22.946L4.99998 22.966L5.00198 22.978C5.00198 22.982 5.00465 22.986 5.00998 22.99L5.02198 22.998L5.03598 23H26.964L26.978 22.998L26.99 22.99L26.998 22.978L27 22.964L26.994 22.944L23.588 17.836C23.2049 17.2615 23.0003 16.5865 23 15.896V10C23 8.14348 22.2625 6.36301 20.9497 5.05025C19.637 3.7375 17.8565 3 16 3Z"
+											fill="#D5D5D9"
+										/>
+									</g>
+								</svg>
+								<span
+									class="absolute -top-1 right-1 size-3 rounded-full border-2 border-white bg-[#ED497E]"
+								></span>
+							</button>
+							<div
+								class="notification-submenu absolute right-0 top-full mt-5 hidden w-[413px] animate-fadeIn cursor-default rounded-lg border border-[#EAEAEA] bg-white shadow-dropdown peer-[.active]:block sm:w-[300px] xs:-right-[123px]"
+							>
+								<ul class="divide-y divide-[#F7F7F7]">
+									<li>
+										<a href="#" class="flex items-center gap-4 p-5">
+											<div class="relative shrink-0">
+												<div
+													class="size-12 overflow-hidden rounded-full bg-[#DDD]"
+												>
+													<img
+														class="absolute right-0 top-0"
+														src="./img/icons/pink-plus.svg"
+														alt="img"
+													/>
+												</div>
+											</div>
+											<p class="text-[#91989A]">
+												<span class="text-[#505356]">John Smith</span>
+												joined your team 5 minutes a minute ago
+											</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#" class="flex items-center gap-4 p-5">
+											<div class="relative shrink-0">
+												<div
+													class="size-12 overflow-hidden rounded-full bg-[#DDD]"
+												>
+													<img
+														class="absolute right-0 top-0"
+														src="./img/icons/pink-plus.svg"
+														alt="img"
+													/>
+												</div>
+											</div>
+											<p class="text-[#91989A]">
+												<span class="text-[#505356]">John Smith</span>
+												joined your team 5 minutes a minute ago
+											</p>
+										</a>
+									</li>
+								</ul>
+
+								<div class="p-5 pt-0">
+									<button class="btn w-full">See all notifications</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Profile Button & Dropdown -->
+						<div class="relative">
+							<button
+								id="profile-btn"
+								class="peer size-[50px] overflow-hidden rounded-full bg-secondary-100"
+							></button>
+							<div
+								class="profile-submenu absolute right-0 top-full mt-2 hidden w-[200px] animate-fadeIn cursor-default rounded-lg border border-[#EAEAEA] bg-white shadow-dropdown peer-[.active]:block"
+							>
+								<ul>
+									<li>
+										<a
+											class="flex px-4 py-3 font-semibold text-[#273246] hover:bg-gray-100"
+											href="#"
+										>
+											My account
+										</a>
+									</li>
+									<li>
+										<a
+											class="flex px-4 py-3 font-semibold text-[#B35A58] hover:bg-gray-100"
+											href="#"
+										>
+											Logout
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 
 					<!-- Burger Button -->
@@ -487,8 +587,8 @@
 										src="./img/icons/lightning.svg"
 										alt="icon"
 									/>
-									<span
-										>We use AI to provide possible answers below, if you dnot
+									<span></span>
+										We use AI to provide possible answers below, if you dnot
 										like the responses click here to
 										<button
 											class="inline font-medium text-[#83819C] hover:text-primary-800"

@@ -3035,30 +3035,6 @@ label {
 }
 
 @media (max-width: 479.99px) {
-  .xs\:-right-20 {
-    right: -5rem;
-  }
-
-  .xs\:-right-\[100px\] {
-    right: -100px;
-  }
-
-  .xs\:-right-\[140px\] {
-    right: -140px;
-  }
-
-  .xs\:-right-\[130px\] {
-    right: -130px;
-  }
-
-  .xs\:-right-\[120px\] {
-    right: -120px;
-  }
-
-  .xs\:-right-\[124px\] {
-    right: -124px;
-  }
-
   .xs\:-right-\[123px\] {
     right: -123px;
   }
