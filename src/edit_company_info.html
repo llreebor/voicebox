@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="h-full" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Voicebox</title>
+		<link rel="stylesheet" href="./css/output.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="h-full">
+		<div class="wrapper relative flex min-h-full flex-col">
+			<a class="absolute left-5 top-5" href="#">
+				<img src="./img/global/logo-small.png" alt="logo" />
+			</a>
+			<section
+				class="flex h-full w-full flex-1 items-center justify-center px-10 py-5"
+			>
+				<div class="mx-auto w-full max-w-[780px]">
+					<!-- [START] Section Header -->
+					<div class="space-y-2">
+						<h2>Let’s confirm your company info</h2>
+						<p class="font-medium text-secondary-300">
+							We just need some basic company info from you to get started.
+						</p>
+					</div>
+					<!-- [END] Section Header -->
+
+					<!-- Form -->
+					<form class="mt-10 space-y-10">
+						<!-- Text Input -->
+						<label for="company_name">
+							Company Name
+							<input
+								type="text"
+								class="input"
+								id="company_name"
+								name="company_name"
+								placeholder="Company Name"
+							/>
+						</label>
+						<!-- Text Input -->
+						<label for="custom_url">
+							Custom url
+							<div class="relative">
+								<input
+									type="text"
+									class="input pr-[120px]"
+									id="custom_url"
+									name="custom_url"
+									placeholder="Custom url"
+								/>
+								<p
+									class="absolute right-4 top-1/2 -translate-y-1/2 text-base font-normal text-[#8B8D8F]"
+								>
+									.viewbox.co
+								</p>
+							</div>
+
+							<p class="text-sm">
+								Your url will be
+								<span id="custom-url-result" class="text-[#1D334E]"> </span
+								>.viewbox.co
+							</p>
+						</label>
+
+						<label for="profile_pic" class="flex cursor-pointer gap-4">
+							Add your profile pic
+							<input type="file" class="hidden" id="profile_pic" />
+							<div class="flex gap-6 xs:flex-col">
+								<div class="relative xs:max-w-fit">
+									<div class="size-20 overflow-hidden rounded-full bg-[#DDD]">
+										<img src="./img/icons/avatar.svg" alt="avatar" />
+									</div>
+									<button
+										type="button"
+										class="pointer-events-none absolute right-0 top-0"
+									>
+										<img src="./img/icons/pen-icon.svg" alt="icon" />
+									</button>
+								</div>
+								<div>
+									<p class="text-xl text-[#2A3851]">Upload your profile pic</p>
+									<p class="text-[#A5A5A5]">
+										Square/circular icons work best. Minimun 256px x 256px
+									</p>
+								</div>
+							</div>
+						</label>
+						<button type="submit" class="btn">Submit</button>
+					</form>
+
+					<p class="mt-10 text-[#BFBFBF]">© 2023</p>
+				</div>
+			</section>
+		</div>
+
+		<!-- JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>

@@ -2107,6 +2107,10 @@ label {
   padding-top: 200px;
 }
 
+.pr-\[120px\] {
+  padding-right: 120px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2561,6 +2565,16 @@ label {
 .text-\[\#0F0F0F\] {
   --tw-text-opacity: 1;
   color: rgb(15 15 15 / var(--tw-text-opacity));
+}
+
+.text-\[\#8B8D8F\] {
+  --tw-text-opacity: 1;
+  color: rgb(139 141 143 / var(--tw-text-opacity));
+}
+
+.text-\[\#1D334E\] {
+  --tw-text-opacity: 1;
+  color: rgb(29 51 78 / var(--tw-text-opacity));
 }
 
 .underline {

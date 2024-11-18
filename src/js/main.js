@@ -120,8 +120,42 @@ function copyToClipboard() {
 		clearInterval(interval)
 	}, 1000)
 }
+
+// Cutom Url Preview
+function previewCustomUrl(inputId, resultId) {
+	const input = document.getElementById(inputId)
+	const result = document.getElementById(resultId)
+
+	input.addEventListener('input', (e) => {
+		result.textContent = e.target.value
+	})
+}
+
+// Tabs
+function toggleTabs(tabsId) {
+	// Get main element
+	const tabs = document.getElementById(tabsId)
+	// Get all the tabs triggers and contents
+	const tabsTriggers = tabs.querySelectorAll('.tab-trigger')
+	const tabsContents = tabs.querySelectorAll('.tab-content')
+
+	// Add a click event listener to each tabs trigger
+	tabsTriggers.forEach((trigger, index) => {
+		trigger.addEventListener('click', () => {
+			// Remove the "active" class from all tabs triggers
+			tabsTriggers.forEach((t) => t.classList.remove('active'))
+			// Add the "activity" class to the clicked tabs trigger
+			trigger.classList.add('active')
+
+			// Hide all tabs contents
+			tabsContents.forEach((content) => content.classList.add('hidden'))
+			// Show the corresponding tabs content
+			tabsContents[index].classList.remove('hidden')
+		})
+	})
+}
+
 // Custom Select
-// init when you need ex. initializeCustomSelect('select', 'options', 'selected-option')
 function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	const customSelect = document.getElementById(selectId)
 	const selectedOption = document.getElementById(selectedOptionId)
@@ -236,38 +270,26 @@ if (document.getElementById('question-skip-select')) {
 	)
 }
 
-// ================ Tabs ==================
-function toggleTabs(tabsId) {
-	// Get main element
-	const tabs = document.getElementById(tabsId)
-	// Get all the tabs triggers and contents
-	const tabsTriggers = tabs.querySelectorAll('.tab-trigger')
-	const tabsContents = tabs.querySelectorAll('.tab-content')
-
-	// Add a click event listener to each tabs trigger
-	tabsTriggers.forEach((trigger, index) => {
-		trigger.addEventListener('click', () => {
-			// Remove the "active" class from all tabs triggers
-			tabsTriggers.forEach((t) => t.classList.remove('active'))
-			// Add the "activity" class to the clicked tabs trigger
-			trigger.classList.add('active')
-
-			// Hide all tabs contents
-			tabsContents.forEach((content) => content.classList.add('hidden'))
-			// Show the corresponding tabs content
-			tabsContents[index].classList.remove('hidden')
-		})
-	})
-}
+// ================== Tabs ====================
 if (document.getElementById('tabs-surveys')) {
 	toggleTabs('tabs-surveys')
 }
 
-// =============== Drawers ===============
+// ================= Drawers =================
 if (document.getElementById('new_survey_drawer')) {
 	toggleDrawer(
 		'new_survey_drawer_trigger',
 		'new_survey_drawer',
 		'new_survey_drawer_close',
 	)
+}
+
+// ============= Copy To Clipboard =============
+if (document.getElementById('link-tooltip')) {
+	copyToClipboard()
+}
+
+// ================ Custom Url ================
+if (document.getElementById('custom_url')) {
+	previewCustomUrl('custom_url', 'custom-url-result')
 }

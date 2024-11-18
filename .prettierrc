@@ -2,6 +2,6 @@
 	"useTabs": true,
 	"semi": false,
 	"singleQuote": true,
-	"htmlWhitespaceSensitivity": "ignore",
+	"htmlWhitespaceSensitivity": "css",
 	"plugins": ["prettier-plugin-tailwindcss"]
 }
