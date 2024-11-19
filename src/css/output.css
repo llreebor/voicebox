@@ -1921,6 +1921,11 @@ label {
   background-color: rgb(245 244 247 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F7D1D0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 209 208 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#F9F0EE\] {
   --tw-bg-opacity: 1;
   background-color: rgb(249 240 238 / var(--tw-bg-opacity));
@@ -2295,6 +2300,11 @@ label {
   color: rgb(17 31 61 / var(--tw-text-opacity));
 }
 
+.text-\[\#111\] {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
+}
+
 .text-\[\#122036\] {
   --tw-text-opacity: 1;
   color: rgb(18 32 54 / var(--tw-text-opacity));
@@ -2445,6 +2455,11 @@ label {
   color: rgb(142 148 155 / var(--tw-text-opacity));
 }
 
+.text-\[\#8F211A\] {
+  --tw-text-opacity: 1;
+  color: rgb(143 33 26 / var(--tw-text-opacity));
+}
+
 .text-\[\#8F9193\] {
   --tw-text-opacity: 1;
   color: rgb(143 145 147 / var(--tw-text-opacity));
@@ -2548,6 +2563,11 @@ label {
 .text-\[\#C17C4F\] {
   --tw-text-opacity: 1;
   color: rgb(193 124 79 / var(--tw-text-opacity));
+}
+
+.text-\[\#DBDBDB\] {
+  --tw-text-opacity: 1;
+  color: rgb(219 219 219 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -2668,16 +2688,6 @@ label {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#DBDBDB\] {
-  --tw-text-opacity: 1;
-  color: rgb(219 219 219 / var(--tw-text-opacity));
-}
-
-.text-\[\#111\] {
-  --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2928,6 +2938,11 @@ label {
   color: rgb(2 2 2 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#1964FF\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(25 100 255 / var(--tw-text-opacity));
+}
+
 .hover\:text-\[\#EC2E28\]:hover {
   --tw-text-opacity: 1;
   color: rgb(236 46 40 / var(--tw-text-opacity));
@@ -2965,11 +2980,6 @@ label {
 .hover\:text-slate-900:hover {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
-.hover\:text-\[\#1964FF\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(25 100 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -3394,16 +3404,6 @@ label {
     margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
 
-  .xs\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .xs\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
   .xs\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -3412,6 +3412,11 @@ label {
   .xs\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .xs\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .xs\:text-center {
