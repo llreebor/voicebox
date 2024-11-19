@@ -106,19 +106,22 @@ function toggleDrawer(triggerId, drawerId, closeBtnId) {
 }
 
 // Copy to Clipboard
-function copyToClipboard() {
-	const copyText = document.getElementById('link')
-	const tooltip = document.getElementById('link-tooltip')
+function copyToClipboard(triggerId, linkId, tooltipId) {
+	const trigger = document.getElementById(triggerId)
+	const copyText = document.getElementById(linkId)
+	const tooltip = document.getElementById(tooltipId)
 
-	navigator.clipboard.writeText(copyText.textContent)
-	tooltip.classList.remove('hidden')
-	tooltip.classList.add('flex')
+	trigger.addEventListener('click', () => {
+		navigator.clipboard.writeText(copyText.textContent)
+		tooltip.classList.remove('hidden')
+		tooltip.classList.add('flex')
 
-	const interval = setInterval(() => {
-		tooltip.classList.add('hidden')
-		tooltip.classList.remove('flex')
-		clearInterval(interval)
-	}, 1000)
+		const interval = setInterval(() => {
+			tooltip.classList.add('hidden')
+			tooltip.classList.remove('flex')
+			clearInterval(interval)
+		}, 1000)
+	})
 }
 
 // Cutom Url Preview
@@ -283,12 +286,18 @@ if (document.getElementById('new_survey_drawer')) {
 		'new_survey_drawer_close',
 	)
 }
-
-// ============= Copy To Clipboard =============
-if (document.getElementById('link-tooltip')) {
-	copyToClipboard()
+if (document.getElementById('enabling_survey_drawer')) {
+	toggleDrawer(
+		'enabling_survey_drawer_trigger',
+		'enabling_survey_drawer',
+		'enabling_survey_drawer_close',
+	)
 }
 
+// ============= Copy To Clipboard =============
+if (document.getElementById('copy-link-btn')) {
+	copyToClipboard('copy-link-btn', 'link', 'link-tooltip')
+}
 // ================ Custom Url ================
 if (document.getElementById('custom_url')) {
 	previewCustomUrl('custom_url', 'custom-url-result')
