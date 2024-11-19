@@ -3399,6 +3399,21 @@ label {
     padding-bottom: 2.5rem;
   }
 
+  .xs\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .xs\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .xs\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .xs\:text-center {
     text-align: center;
   }
