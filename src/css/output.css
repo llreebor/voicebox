@@ -2670,6 +2670,16 @@ label {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\#DBDBDB\] {
+  --tw-text-opacity: 1;
+  color: rgb(219 219 219 / var(--tw-text-opacity));
+}
+
+.text-\[\#111\] {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2955,6 +2965,11 @@ label {
 .hover\:text-slate-900:hover {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[\#1964FF\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(25 100 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -3320,6 +3335,10 @@ label {
     margin-right: 0.75rem;
   }
 
+  .xs\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .xs\:w-full {
     width: 100%;
   }
@@ -3367,6 +3386,12 @@ label {
 
   .xs\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .xs\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
 
   .xs\:py-10 {
