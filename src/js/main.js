@@ -74,6 +74,7 @@ if (document.getElementById('notification-btn')) {
 if (document.getElementById('profile-btn')) {
 	toggleNavStats('profile-btn', '.profile-submenu')
 }
+
 // Drawer
 function toggleDrawer(triggerId, drawerId, closeBtnId) {
 	const trigger = document.getElementById(triggerId)
@@ -102,6 +103,31 @@ function toggleDrawer(triggerId, drawerId, closeBtnId) {
 
 			drawer.classList.add('opacity-0')
 		}
+	})
+}
+
+// Modal
+function toggleModal(triggerId, modalId, closeBtnId) {
+	const trigger = document.getElementById(triggerId)
+	const modal = document.getElementById(modalId)
+	const close = document.getElementById(closeBtnId)
+	const body = document.body
+
+	trigger.addEventListener('click', () => {
+		modal.classList.toggle('hidden')
+		body.classList.toggle('overflow-hidden')
+	})
+
+	modal.addEventListener('click', (e) => {
+		if (e.target.classList.contains(modalId)) {
+			modal.classList.add('hidden')
+			body.classList.remove('overflow-hidden')
+		}
+	})
+
+	close.addEventListener('click', () => {
+		modal.classList.add('hidden')
+		body.classList.remove('overflow-hidden')
 	})
 }
 
@@ -278,7 +304,7 @@ if (document.getElementById('tabs-surveys')) {
 	toggleTabs('tabs-surveys')
 }
 
-// ================= Drawers =================
+// ================== Drawers =================
 if (document.getElementById('new_survey_drawer')) {
 	toggleDrawer(
 		'new_survey_drawer_trigger',
@@ -291,6 +317,15 @@ if (document.getElementById('enabling_survey_drawer')) {
 		'enabling_survey_drawer_trigger',
 		'enabling_survey_drawer',
 		'enabling_survey_drawer_close',
+	)
+}
+
+// ================== Modal ===================
+if (document.getElementById('invite_member_modal')) {
+	toggleModal(
+		'invite_member_modal_trigger',
+		'invite_member_modal',
+		'invite_member_modal_close',
 	)
 }
 
