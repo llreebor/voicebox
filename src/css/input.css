@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html,
+body {
+	scrollbar-gutter: stable;
+}
 @layer base {
 	.container {
 		@apply max-w-[1280px];

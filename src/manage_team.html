@@ -462,6 +462,10 @@
 								</div>
 							</div>
 
+							<p class="mt-5 rounded-lg bg-green-50 p-5 text-green-300">
+								Team member removed from your team.
+							</p>
+
 							<!-- Members -->
 							<div class="mt-5 space-y-5">
 								<!-- Member Item -->
@@ -494,6 +498,7 @@
 									</div>
 									<div class="ml-auto xs:ml-0">
 										<button
+											id="remove_member_modal_trigger"
 											class="font-medium text-[#AA4542] transition-colors hover:text-[#EC2E28]"
 										>
 											Remove
@@ -504,7 +509,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- Modal -->
+				<!-- Invite a  Member Modal -->
 				<div
 					id="invite_member_modal"
 					class="invite_member_modal fixed inset-0 z-10 hidden animate-fadeIn bg-[#CACBD6]/60 p-5"
@@ -607,6 +612,51 @@
 							</div>
 
 							<button class="btn">Continue</button>
+						</div>
+					</div>
+				</div>
+				<!-- Remove a  Member Modal -->
+				<div
+					id="remove_member_modal"
+					class="remove_member_modal fixed inset-0 z-10 hidden animate-fadeIn bg-[#CACBD6]/60 p-5"
+				>
+					<div
+						class="mx-auto mt-[100px] h-auto w-full max-w-[730px] rounded-lg bg-white p-10 sm:p-5"
+					>
+						<!-- Close Btn -->
+						<button
+							id="remove_member_modal_close"
+							class="ml-auto flex size-7 max-w-fit items-center justify-center rounded p-2 hover:bg-gray-100"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+							>
+								<path
+									d="M18 1.81286L16.1871 0L9 7.18714L1.81286 0L0 1.81286L7.18714 9L0 16.1871L1.81286 18L9 10.8129L16.1871 18L18 16.1871L10.8129 9L18 1.81286Z"
+									fill="#C2C2C2"
+								/>
+							</svg>
+						</button>
+
+						<!-- Content -->
+						<div class="mt-5 space-y-5">
+							<div class="space-y-2">
+								<p class="text-2xl text-[#060B1D]">Are you sure?</p>
+								<p class="text-[#777]">
+									If you remove this team member they will no longer be part of
+									your company and will lose all privileges.
+								</p>
+							</div>
+
+							<button
+								class="btn border-[#F0DDE6] bg-[#FDEEF5] text-[#BA3D7E] shadow-[0px_1px_1px_0px_rgba(0,0,0,0.08)] hover:border-[#F0DDE6] hover:bg-[#F9E7E9]"
+							>
+								Remove from company
+							</button>
 						</div>
 					</div>
 				</div>

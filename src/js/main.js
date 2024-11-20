@@ -328,6 +328,13 @@ if (document.getElementById('invite_member_modal')) {
 		'invite_member_modal_close',
 	)
 }
+if (document.getElementById('remove_member_modal')) {
+	toggleModal(
+		'remove_member_modal_trigger',
+		'remove_member_modal',
+		'remove_member_modal_close',
+	)
+}
 
 // ============= Copy To Clipboard =============
 if (document.getElementById('copy-link-btn')) {
