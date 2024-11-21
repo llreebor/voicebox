@@ -759,6 +759,8 @@ body {
 }
 
 section {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 252 252 / var(--tw-bg-opacity));
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -1299,6 +1301,11 @@ label {
   height: 1.75rem;
 }
 
+.size-\[30px\] {
+  width: 30px;
+  height: 30px;
+}
+
 .size-\[34px\] {
   width: 34px;
   height: 34px;
@@ -1314,8 +1321,17 @@ label {
   height: 54px;
 }
 
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .h-12 {
   height: 3rem;
+}
+
+.h-2\.5 {
+  height: 0.625rem;
 }
 
 .h-5 {
@@ -1441,6 +1457,10 @@ label {
 
 .max-w-\[522px\] {
   max-width: 522px;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .max-w-\[640px\] {
@@ -1751,6 +1771,10 @@ label {
   border-radius: 1rem;
 }
 
+.rounded-\[10px\] {
+  border-radius: 10px;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1773,6 +1797,10 @@ label {
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-r {
@@ -1857,6 +1885,11 @@ label {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-b-\[\#EEE\] {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(238 238 238 / var(--tw-border-opacity));
+}
+
 .border-r-\[\#EBEBEB\] {
   --tw-border-opacity: 1;
   border-right-color: rgb(235 235 235 / var(--tw-border-opacity));
@@ -1865,6 +1898,11 @@ label {
 .border-t-\[\#F4F4F4\] {
   --tw-border-opacity: 1;
   border-top-color: rgb(244 244 244 / var(--tw-border-opacity));
+}
+
+.bg-\[\#1964FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 100 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#2E70FA\] {
@@ -2345,6 +2383,16 @@ label {
   color: rgb(47 97 183 / var(--tw-text-opacity));
 }
 
+.text-\[\#333\] {
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.text-\[\#363B4A\] {
+  --tw-text-opacity: 1;
+  color: rgb(54 59 74 / var(--tw-text-opacity));
+}
+
 .text-\[\#3663F5\] {
   --tw-text-opacity: 1;
   color: rgb(54 99 245 / var(--tw-text-opacity));
@@ -2688,6 +2736,11 @@ label {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#48525E\] {
+  --tw-text-opacity: 1;
+  color: rgb(72 82 94 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3073,6 +3126,11 @@ body {
 .group.active .group-\[\.active\]\:text-\[\#1A1919\] {
   --tw-text-opacity: 1;
   color: rgb(26 25 25 / var(--tw-text-opacity));
+}
+
+.group.active .group-\[\.active\]\:text-\[\#3E62C9\] {
+  --tw-text-opacity: 1;
+  color: rgb(62 98 201 / var(--tw-text-opacity));
 }
 
 .group.active .group-\[\.active\]\:opacity-0 {

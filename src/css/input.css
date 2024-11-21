@@ -13,7 +13,7 @@ body {
 		@apply relative tracking-md;
 	}
 	section {
-		@apply py-20 sm:py-10;
+		@apply bg-[#FCFCFC] py-20 sm:py-10;
 	}
 	p {
 		@apply font-medium;

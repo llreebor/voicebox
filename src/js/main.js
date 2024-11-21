@@ -76,13 +76,27 @@ if (document.getElementById('profile-btn')) {
 }
 
 // Drawer
-function toggleDrawer(triggerId, drawerId, closeBtnId) {
+function toggleDrawer(triggerId, drawerId, closeBtnId, triggersClass = '') {
 	const trigger = document.getElementById(triggerId)
 	const drawer = document.getElementById(drawerId)
 	const content = drawer.querySelector('.drawer-content')
 	const closeBtn = document.getElementById(closeBtnId)
 
-	trigger.addEventListener('click', () => {
+	const triggersList = triggersClass
+		? document.querySelectorAll(triggersClass)
+		: null
+
+	if (triggersList && triggersList.length > 0) {
+		triggersList.forEach((item) => {
+			item.addEventListener('click', () => {
+				drawer.classList.remove('translate-x-full')
+				content.classList.remove('translate-x-full')
+				drawer.classList.remove('opacity-0')
+			})
+		})
+	}
+
+	trigger?.addEventListener('click', () => {
 		drawer.classList.remove('translate-x-full')
 		content.classList.remove('translate-x-full')
 
@@ -100,7 +114,6 @@ function toggleDrawer(triggerId, drawerId, closeBtnId) {
 		if (e.target.classList.contains(drawerId)) {
 			drawer.classList.add('translate-x-full')
 			content.classList.add('translate-x-full')
-
 			drawer.classList.add('opacity-0')
 		}
 	})
@@ -317,6 +330,14 @@ if (document.getElementById('enabling_survey_drawer')) {
 		'enabling_survey_drawer_trigger',
 		'enabling_survey_drawer',
 		'enabling_survey_drawer_close',
+	)
+}
+if (document.getElementById('response_item_drawer')) {
+	toggleDrawer(
+		null,
+		'response_item_drawer',
+		'response_item_drawer_close',
+		'.response-item-trigger',
 	)
 }
 
