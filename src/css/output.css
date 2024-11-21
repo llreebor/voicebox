@@ -1271,6 +1271,11 @@ label {
   display: none;
 }
 
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .size-11 {
   width: 2.75rem;
   height: 2.75rem;
@@ -1319,11 +1324,6 @@ label {
 .size-\[54px\] {
   width: 54px;
   height: 54px;
-}
-
-.size-10 {
-  width: 2.5rem;
-  height: 2.5rem;
 }
 
 .h-12 {
@@ -1455,8 +1455,16 @@ label {
   max-width: 452px;
 }
 
+.max-w-\[460px\] {
+  max-width: 460px;
+}
+
 .max-w-\[522px\] {
   max-width: 522px;
+}
+
+.max-w-\[540px\] {
+  max-width: 540px;
 }
 
 .max-w-\[600px\] {
@@ -1500,8 +1508,8 @@ label {
   max-width: 100%;
 }
 
-.max-w-\[540px\] {
-  max-width: 540px;
+.max-w-\[462px\] {
+  max-width: 462px;
 }
 
 .flex-1 {
@@ -2426,6 +2434,11 @@ label {
   color: rgb(61 61 61 / var(--tw-text-opacity));
 }
 
+.text-\[\#48525E\] {
+  --tw-text-opacity: 1;
+  color: rgb(72 82 94 / var(--tw-text-opacity));
+}
+
 .text-\[\#4B617A\] {
   --tw-text-opacity: 1;
   color: rgb(75 97 122 / var(--tw-text-opacity));
@@ -2746,9 +2759,9 @@ label {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\#48525E\] {
+.text-\[\#151515\] {
   --tw-text-opacity: 1;
-  color: rgb(72 82 94 / var(--tw-text-opacity));
+  color: rgb(21 21 21 / var(--tw-text-opacity));
 }
 
 .underline {
