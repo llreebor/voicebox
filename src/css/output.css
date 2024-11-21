@@ -1500,6 +1500,10 @@ label {
   max-width: 100%;
 }
 
+.max-w-\[540px\] {
+  max-width: 540px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2077,6 +2081,10 @@ label {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-\[60px\] {
+  padding: 60px;
 }
 
 .px-1 {
