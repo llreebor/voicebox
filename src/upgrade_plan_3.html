@@ -16,527 +16,305 @@
 
 	<body class="h-full">
 		<div class="wrapper flex min-h-full flex-col">
-			<!-- Header -->
-			<header class="z-10 px-5 py-[18px] shadow-header">
-				<div class="flex items-center">
-					<a href=" #">
-						<img src="./img/global/logo-small.png" alt="logo" />
-					</a>
-					<!-- Desktop menu -->
-					<nav id="menu" class="z-10 ml-20 flex animate-fadeIn md:hidden">
-						<ul class="flex items-center gap-10">
-							<!-- Menu Item -->
-							<li>
-								<a href="#" class="menu-link py-5">
-									<span>Dashboards</span>
-								</a>
-							</li>
-							<!-- Menu Item -->
-							<li>
-								<a href="#" class="menu-link py-5">
-									<span>Surveys</span>
-								</a>
-							</li>
-							<!-- Menu Item -->
-							<li>
-								<a href="#" class="menu-link py-5">
-									<span>Responses</span>
-								</a>
-							</li>
-							<!-- Menu Item -->
-							<li>
-								<a href="#" class="menu-link py-5">
-									<span class="flex items-center gap-2">
-										AI
-										<span
-											class="rounded bg-[#F9F0EE] px-1 py-[3px] text-xs uppercase text-[#B73B7E]"
-										>
-											beta
-										</span>
-									</span>
-								</a>
-							</li>
-							<!-- Menu Item With Submenu -->
-							<li class="menu-link group relative cursor-pointer py-5">
-								<a href="#" class="flex items-center gap-2">
-									<span>Account</span>
-									<svg
-										class="transition-transform group-hover:rotate-180"
-										xmlns="http://www.w3.org/2000/svg"
-										width="15"
-										height="8"
-										viewBox="0 0 15 8"
-										fill="none"
-									>
-										<path
-											class="group-hover:stroke-primary-600"
-											d="M13.3334 1L7.33337 7L1.33337 1"
-											stroke="#9597B2"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-
-									<!-- SUbmenu | Dropdown -->
-									<nav
-										class="absolute left-0 top-full hidden min-w-max divide-y divide-secondary-200 overflow-hidden rounded-lg border border-secondary-200 bg-white shadow-dropdown group-hover:grid"
-									>
-										<ul class="pb-3">
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Survey settings
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Custom domain
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Company details
-												</a>
-											</li>
-										</ul>
-										<ul class="py-3">
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Manage team
-												</a>
-											</li>
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Join team link
-												</a>
-											</li>
-										</ul>
-										<ul class="pt-3">
-											<li>
-												<a
-													class="flex px-4 py-3 text-secondary-900 hover:bg-gray-100"
-													href="#"
-												>
-													Plans
-												</a>
-											</li>
-										</ul>
-									</nav>
-								</a>
-							</li>
-						</ul>
-					</nav>
-
-					<!--  Mobile menu -->
-					<div
-						id="mobile-menu"
-						class="mobile-menu group fixed -left-full top-0 h-full w-full animate-fadeIn bg-black/70"
-					>
+			<!-- Main Content -->
+			<section class="flex h-full w-full flex-1 p-0">
+				<div class="grid h-auto w-full grid-cols-2 md:grid-cols-1">
+					<div class="h-full bg-[#F6F6F6] p-20 xl:p-10 sm:p-5">
 						<div
-							class="h-full w-0 space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
+							class="mx-auto flex h-full w-full max-w-[492px] flex-col sm:max-w-full"
 						>
-							<a href="#">
-								<img src="./img/global/logo-small.png" alt="logo" />
+							<a href="#" class="flex items-center gap-4">
+								<img src="./img/icons/back-arrow.svg" alt="icon" />
+								<img src="./img/global/logo.png" alt="logo" />
 							</a>
-
-							<nav>
-								<ul class="divide-y divide-gray-200">
-									<li class="py-4">
-										<a
-											href="#"
-											class="menu-link text-xl text-primary-900 hover:text-current"
-										>
-											Dashboards
-										</a>
-									</li>
-									<li class="py-4">
-										<a
-											href="#"
-											class="menu-link text-xl text-primary-900 hover:text-current"
-										>
-											Surveys
-										</a>
-									</li>
-									<li class="py-4">
-										<a
-											href="#"
-											class="menu-link text-xl text-primary-900 hover:text-current"
-										>
-											Responses
-										</a>
-									</li>
-									<li class="py-4">
-										<a
-											href="#"
-											class="menu-link text-xl text-primary-900 hover:text-current"
-										>
-											<span class="flex items-center gap-2">
-												AI
-												<span
-													class="rounded bg-[#F9F0EE] px-1 py-[3px] text-xs uppercase text-[#B73B7E]"
-												>
-													beta
-												</span>
-											</span>
-										</a>
-									</li>
-
-									<!-- Menu Item With Submenu -->
-									<li
-										class="with-submenu menu-link group relative py-4 text-xl text-primary-900 hover:text-current"
-									>
-										<div class="flex flex-col gap-2">
-											<!-- Submenu Trigger -->
-											<button
-												class="submenu-trigger flex items-center justify-between gap-2"
-											>
-												<span class="pointer-events-none">More</span>
-												<svg
-													width="24"
-													height="24"
-													viewBox="0 0 24 24"
-													fill="none"
-													class="pointer-events-none transition-transform group-[.active]:rotate-180"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														d="M7 10L12 15L17 10"
-														stroke="#121826"
-														stroke-opacity="1"
-														stroke-width="3"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-													/>
-												</svg>
-											</button>
-
-											<!-- Submenu Content -->
-											<div
-												class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
-											>
-												<div class="overflow-hidden">
-													<ul class="space-y-2">
-														<li>
-															<a
-																href="#"
-																class="flex px-4 py-2 text-lg hover:text-primary-900"
-															>
-																Survey settings
-															</a>
-														</li>
-														<li>
-															<a
-																href="#"
-																class="flex px-4 py-2 text-lg hover:text-primary-900"
-															>
-																Custom domain
-															</a>
-														</li>
-														<li>
-															<a
-																href="#"
-																class="flex px-4 py-2 text-lg hover:text-primary-900"
-															>
-																Company details
-															</a>
-														</li>
-														<li>
-															<a
-																href="#"
-																class="flex px-4 py-2 text-lg hover:text-primary-900"
-															>
-																Manage team
-															</a>
-														</li>
-														<li>
-															<a
-																href="#"
-																class="flex px-4 py-2 text-lg hover:text-primary-900"
-															>
-																Join team link
-															</a>
-														</li>
-														<li>
-															<a
-																href="#"
-																class="flex px-4 py-2 text-lg hover:text-primary-900"
-															>
-																Plans
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-
-					<!-- Buttons -->
-					<div
-						class="ml-auto flex items-center gap-10 md:mr-10 md:gap-5 xs:mr-3"
-					>
-						<!-- Stats Button & Dropdown -->
-						<div class="relative">
-							<button
-								id="stats-btn"
-								class="peer flex items-center gap-2 rounded-lg bg-[#EDF4FF] px-3 py-2"
-							>
-								<img src="./img/icons/heart-rate.svg" alt="icon" />
-								<p class="font-semibold text-[#3C64ED]">13</p>
-							</button>
-							<div
-								class="stats-submenu absolute right-0 top-full mt-5 hidden w-[308px] animate-fadeIn cursor-default rounded-lg border border-[#EAEAEA] bg-white p-5 shadow-dropdown peer-[.active]:block sm:-right-1/2 sm:w-[200px] sm:translate-x-1/2"
-							>
-								<p class="text-left text-base text-[#273246]">
-									13 survey responses collected so far this month
-								</p>
-								<p class="text-left text-sm text-[#91989A]">
-									This will reset on the 1st of September
-								</p>
-							</div>
-						</div>
-
-						<!-- Notification Button & Dropdown -->
-						<div class="relative">
-							<button
-								id="notification-btn"
-								class="peer flex items-center gap-2 rounded-lg"
-							>
-								<svg
-									width="32"
-									height="32"
-									viewBox="0 0 32 32"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
+							<div class="flex-1 p-10 sm:mt-5 sm:p-0">
+								<p class="text-[#5E5E5E]">Subscribe to Business Plan</p>
+								<div
+									class="flex items-center gap-4 xs:flex-col xs:items-start xs:gap-0"
 								>
-									<g id="octicon:bell-16">
-										<path
-											class="group-hover:fill-primary-600"
-											id="Vector"
-											d="M16 32C16.9745 32.0003 17.9156 31.6449 18.6466 31.0005C19.3776 30.356 19.8482 29.4669 19.97 28.5C20.004 28.226 19.776 28 19.5 28H12.5C12.224 28 11.996 28.226 12.03 28.5C12.1518 29.4669 12.6224 30.356 13.3534 31.0005C14.0844 31.6449 15.0255 32.0003 16 32ZM5.99998 10C5.99998 7.34784 7.05355 4.8043 8.92892 2.92893C10.8043 1.05357 13.3478 0 16 0C18.6521 0 21.1957 1.05357 23.0711 2.92893C24.9464 4.8043 26 7.34784 26 10V15.894C26 15.9953 26.028 16.088 26.084 16.172L29.49 21.282C29.7935 21.7393 29.9675 22.2704 29.9934 22.8187C30.0193 23.367 29.8961 23.912 29.6371 24.396C29.378 24.8799 28.9926 25.2845 28.522 25.567C28.0513 25.8494 27.5129 25.9991 26.964 26H5.03598C4.48594 26.0013 3.9459 25.853 3.4737 25.5709C3.0015 25.2888 2.61493 24.8836 2.35539 24.3987C2.09585 23.9137 1.97313 23.3673 2.00036 22.8179C2.02759 22.2685 2.20376 21.7369 2.50998 21.28L5.91598 16.172C5.96982 16.0892 5.99895 15.9928 5.99998 15.894V10ZM16 3C14.1435 3 12.363 3.7375 11.0502 5.05025C9.73748 6.36301 8.99998 8.14348 8.99998 10V15.894C8.99998 16.586 8.79598 17.26 8.41198 17.834L5.00598 22.946L4.99998 22.966L5.00198 22.978C5.00198 22.982 5.00465 22.986 5.00998 22.99L5.02198 22.998L5.03598 23H26.964L26.978 22.998L26.99 22.99L26.998 22.978L27 22.964L26.994 22.944L23.588 17.836C23.2049 17.2615 23.0003 16.5865 23 15.896V10C23 8.14348 22.2625 6.36301 20.9497 5.05025C19.637 3.7375 17.8565 3 16 3Z"
-											fill="#D5D5D9"
-										/>
-									</g>
-								</svg>
-								<span
-									class="absolute -top-1 right-1 size-3 rounded-full border-2 border-white bg-[#ED497E]"
-								></span>
-							</button>
-							<div
-								class="notification-submenu absolute right-0 top-full mt-5 hidden w-[413px] animate-fadeIn cursor-default rounded-lg border border-[#EAEAEA] bg-white shadow-dropdown peer-[.active]:block sm:w-[300px] xs:-right-[123px]"
-							>
-								<ul class="divide-y divide-[#F7F7F7]">
-									<li>
-										<a href="#" class="flex items-center gap-4 p-5">
-											<div class="relative shrink-0">
-												<div
-													class="size-12 overflow-hidden rounded-full bg-[#DDD]"
-												>
-													<img
-														class="absolute right-0 top-0"
-														src="./img/icons/pink-plus.svg"
-														alt="img"
-													/>
-												</div>
-											</div>
-											<p class="text-[#91989A]">
-												<span class="text-[#505356]">John Smith</span>
-												joined your team 5 minutes a minute ago
-											</p>
-										</a>
-									</li>
+									<p class="text-5xl leading-normal text-[#2F2F2F]">US$49.00</p>
 
-									<li>
-										<a href="#" class="flex items-center gap-4 p-5">
-											<div class="relative shrink-0">
-												<div
-													class="size-12 overflow-hidden rounded-full bg-[#DDD]"
-												>
-													<img
-														class="absolute right-0 top-0"
-														src="./img/icons/pink-plus.svg"
-														alt="img"
-													/>
-												</div>
-											</div>
-											<p class="text-[#91989A]">
-												<span class="text-[#505356]">John Smith</span>
-												joined your team 5 minutes a minute ago
-											</p>
-										</a>
-									</li>
-								</ul>
+									<span
+										class="w-[52px] text-base font-semibold text-[#636363] xs:w-full"
+									>
+										per month
+									</span>
+								</div>
 
-								<div class="p-5 pt-0">
-									<button class="btn w-full">See all notifications</button>
+								<div class="mt-10 sm:mt-5">
+									<div class="flex items-center justify-between gap-5">
+										<div>
+											<p class="text-xl text-[#181818]">Business Plan</p>
+											<p class="text-sm text-[#7D7D7D]">Billed Monthly</p>
+										</div>
+										<p class="text-xl text-[#2F2F2F]">US$49.00</p>
+									</div>
+								</div>
+
+								<div class="mt-10 space-y-5 sm:mt-5">
+									<div class="flex items-center justify-between gap-5">
+										<div>
+											<p class="text-xl text-[#181818]">Subtotal</p>
+										</div>
+										<p class="text-xl text-[#1F1F1F]">US$49.00</p>
+									</div>
+
+									<div class="space-y-5">
+										<hr />
+										<button class="btn btn-secondary xs:w-full">
+											Add promotion code
+										</button>
+										<hr />
+									</div>
+
+									<div class="flex items-center justify-between gap-5">
+										<div>
+											<p class="text-xl text-[#181818]">Total due today</p>
+										</div>
+										<p class="text-xl text-[#1F1F1F]">US$49.00</p>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<!-- Profile Button & Dropdown -->
-						<div class="relative">
-							<button
-								id="profile-btn"
-								class="peer size-[50px] overflow-hidden rounded-full bg-secondary-100"
-							></button>
-							<div
-								class="profile-submenu absolute right-0 top-full mt-2 hidden w-[200px] animate-fadeIn cursor-default rounded-lg border border-[#EAEAEA] bg-white shadow-dropdown peer-[.active]:block"
-							>
-								<ul>
+							<div class="mt-auto flex gap-5 divide-x sm:mt-5">
+								<p class="font-normal text-[#7B7B7B]">
+									Powered by
+									<a
+										href="#"
+										class="font-semibold text-[#969696] transition-colors hover:text-gray-600"
+									>
+										stripe
+									</a>
+								</p>
+								<ul class="flex items-center gap-5 pl-5">
 									<li>
 										<a
-											class="flex px-4 py-3 font-semibold text-[#273246] hover:bg-gray-100"
 											href="#"
+											class="text-[#7B7B7B] transition-colors hover:text-gray-600"
 										>
-											My account
+											Terms
 										</a>
 									</li>
 									<li>
 										<a
-											class="flex px-4 py-3 font-semibold text-[#B35A58] hover:bg-gray-100"
 											href="#"
+											class="text-[#7B7B7B] transition-colors hover:text-gray-600"
 										>
-											Logout
+											Privacy
 										</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
+					<div class="h-full bg-white p-20 xl:p-10 sm:p-5">
+						<div class="mx-auto w-full max-w-[433px] space-y-10 sm:space-y-5">
+							<a
+								href="#"
+								class="btn border-[#6EDAB6] bg-[#6EDAB6] text-black hover:border-[#28C590] hover:bg-[#28C590]"
+							>
+								Pay with link
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="9"
+									height="14"
+									viewBox="0 0 9 14"
+									fill="none"
+								>
+									<path
+										d="M1.5 1L7.5 7L1.5 13"
+										stroke="black"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</a>
 
-					<!-- Burger Button -->
-					<button
-						id="burger"
-						class="group relative z-20 hidden h-5 w-[30px] md:block"
-					>
-						<span
-							class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
-						></span>
-						<span
-							class="absolute left-0 top-1/2 flex h-[2px] w-[30px] -translate-y-1/2 translate-x-0 bg-secondary-700 transition-transform group-[.active]:opacity-0"
-						></span>
-						<span
-							class="absolute bottom-0 left-0 flex h-[2px] w-[30px] bg-secondary-700 transition-transform group-[.active]:-translate-y-[10px] group-[.active]:-rotate-45 group-[.active]:bg-white"
-						></span>
-					</button>
-				</div>
-			</header>
-			<!-- Main Content -->
-			<main class="flex-auto"></main>
+							<div
+								class="relative z-0 flex items-center justify-center after:absolute after:left-0 after:top-1/2 after:-z-10 after:h-px after:w-full after:-translate-y-1/2 after:bg-[#E9E9E9]"
+							>
+								<p class="bg-white px-5 font-normal text-[#888]">
+									Or pay with card
+								</p>
+							</div>
 
-			<!-- Footer -->
-			<footer class="border-t border-t-[#F4F4F4] py-20 xs:py-10">
-				<div class="container">
-					<div
-						class="flex items-center justify-between xs:flex-col-reverse xs:items-start xs:gap-10"
-					>
-						<div class="space-y-5">
-							<a href="#"><img src="./img/global/logo.png" alt="logo" /></a>
-							<p class="text-secondary-300">© 2024</p>
-						</div>
-						<div class="flex gap-10">
-							<nav>
-								<ul class="space-y-5">
-									<li>
+							<form action="#" class="space-y-5">
+								<label for="email">
+									Email
+									<input type="email" class="input" id="email" name="email" />
+								</label>
+
+								<div>
+									<label for="card_number">
+										Card information
+										<input
+											type="email"
+											class="input rounded-b-none"
+											id="card_number"
+											name="card_number"
+											placeholder="1234 1234 1234 1234"
+										/>
+									</label>
+									<div class="grid grid-cols-2">
+										<input
+											type="email"
+											class="input rounded-t-none rounded-br-none"
+											id="card_expires"
+											name="card_expires"
+											placeholder="MM / YY"
+										/>
+										<input
+											type="email"
+											class="input rounded-t-none rounded-bl-none"
+											id="card_cvc"
+											name="card_cvc"
+											placeholder="CVC"
+										/>
+									</div>
+								</div>
+
+								<label for="name">
+									Name on the card
+									<input type="email" class="input" id="name" name="name" />
+								</label>
+
+								<div>
+									<!-- [START] HTML Select  -->
+									<label>
+										Country of origin
+										<div class="relative">
+											<div
+												id="card-country-select"
+												class="input select flex cursor-pointer rounded-b-none border focus:border-primary-400"
+											>
+												<span id="card-country-selected-option">USA</span>
+
+												<div
+													class="arrow absolute right-3 top-1/2 -translate-y-1/2"
+												>
+													<svg
+														class="transition-transform"
+														xmlns="http://www.w3.org/2000/svg"
+														width="13"
+														height="8"
+														viewBox="0 0 13 8"
+														fill="none"
+													>
+														<path
+															d="M7.34756 7.60953C6.87901 8.13016 6.11807 8.13016 5.64952 7.60953L0.85152 2.27828C0.506664 1.89509 0.405456 1.32448 0.592878 0.824679C0.7803 0.324874 1.21512 0 1.70242 0H11.2984C11.782 0 12.2205 0.324874 12.408 0.824679C12.5954 1.32448 12.4904 1.89509 12.1493 2.27828L7.35131 7.60953H7.34756Z"
+															fill="#565D64"
+														/>
+													</svg>
+												</div>
+											</div>
+											<div
+												id="card-country-options"
+												class="absolute z-10 mt-1 hidden min-w-full transform overflow-hidden rounded-md border bg-white shadow-sm transition-all duration-300 ease-in-out"
+											>
+												<ul class="grid">
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														USA
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Canada
+													</li>
+													<li
+														class="option cursor-pointer px-4 py-3 font-medium text-[#273246] hover:bg-gray-100"
+													>
+														Spain
+													</li>
+												</ul>
+											</div>
+										</div>
+									</label>
+									<!-- [END] HTML Select  -->
+
+									<input
+										type="email"
+										class="input rounded-t-none"
+										id="country"
+										name="country"
+										placeholder="ZIP"
+									/>
+								</div>
+
+								<div>
+									<div
+										class="rounded-lg rounded-b-none border border-b-0 border-[#CECECE] bg-white"
+									>
+										<div class="px-4 py-2.5">
+											<p class="text-[#030303]">
+												Securely same my information for 1-click checkout
+											</p>
+											<p class="font-normal text-[#A0A0A0]">
+												Enter your phone number to create a Link account and pay
+												faster on Wayyy and everywhere Link is accepted
+											</p>
+										</div>
+									</div>
+									<div class="relative flex items-center gap-2.5">
+										<div
+											class="absolute left-4 top-1/2 w-6 shrink-0 -translate-y-1/2"
+										>
+											<img src="./img/icons/flag.svg" alt="flag" />
+										</div>
+										<input
+											type="text"
+											placeholder="(201) 555-0123"
+											class="input rounded-t-none pl-[50px] pr-20"
+										/>
+										<p
+											class="absolute right-4 top-1/2 -translate-y-1/2 rounded border border-[#CECECE] p-1 text-xs text-[#7D7D7D]"
+										>
+											Optional
+										</p>
+									</div>
+
+									<div class="mt-2 flex items-center justify-center gap-2">
 										<a
 											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+											class="text-sm text-[#696969] hover:text-gray-700"
 										>
-											Pricing
+											<p>Link</p>
 										</a>
-									</li>
-									<li>
+										<p>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="5"
+												height="5"
+												viewBox="0 0 5 5"
+												fill="none"
+											>
+												<circle cx="2.5" cy="2.5" r="2" fill="#B4B4B4" />
+											</svg>
+										</p>
 										<a
 											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
+											class="text-sm text-[#7E7E7E] underline underline-offset-4 hover:text-gray-700"
 										>
-											Demo
+											<p>More Info</p>
 										</a>
-									</li>
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											Blog
-										</a>
-									</li>
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											About Us
-										</a>
-									</li>
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											Brand
-										</a>
-									</li>
-								</ul>
-							</nav>
-							<nav>
-								<ul class="space-y-5">
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											Contact Us
-										</a>
-									</li>
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											Terms of use
-										</a>
-									</li>
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											Privacy policy
-										</a>
-									</li>
-									<li>
-										<a
-											href="#"
-											class="font-medium text-secondary-300 transition-colors hover:text-secondary-700"
-										>
-											Cookie policy
-										</a>
-									</li>
-								</ul>
-							</nav>
+									</div>
+								</div>
+
+								<div class="space-y-2 pt-5">
+									<button class="btn w-full">Subscribe</button>
+									<p class="text-center text-sm font-normal text-[#737373]">
+										By confirming your subscription, you allow Wayyy to charge
+										your card for this payment and future payments in accordance
+										with their terms. You can always cancel your subscription.
+									</p>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
-			</footer>
+			</section>
 		</div>
 
 		<!-- JS -->

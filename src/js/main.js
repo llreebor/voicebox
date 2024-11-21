@@ -311,6 +311,13 @@ if (document.getElementById('question-skip-select')) {
 		'question-skip-selected-option',
 	)
 }
+if (document.getElementById('card-country-select')) {
+	initializeCustomSelect(
+		'card-country-select',
+		'card-country-options',
+		'card-country-selected-option',
+	)
+}
 
 // ================== Tabs ====================
 if (document.getElementById('tabs-surveys')) {
