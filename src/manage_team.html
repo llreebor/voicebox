@@ -145,7 +145,7 @@
 					<!--  Mobile menu -->
 					<div
 						id="mobile-menu"
-						class="mobile-menu group fixed -left-full top-0 h-full w-full animate-fadeIn bg-black/70"
+						class="mobile-menu group fixed -left-full top-0 z-10 h-full w-full animate-fadeIn bg-black/70"
 					>
 						<div
 							class="h-full w-0 space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
@@ -477,7 +477,8 @@
 									</div>
 									<div class="xs:text-center">
 										<p class="text-xl text-[#070707]">
-											Jane Doe <span class="text-[#ACAEB0]">(You)</span>
+											Jane Doe
+											<span class="text-[#ACAEB0]">(You)</span>
 										</p>
 										<p class="text-[#B8B9BB]">Manager</p>
 									</div>
@@ -605,8 +606,9 @@
 									<a
 										href="#"
 										class="text-[#1D334E] underline-offset-4 hover:underline"
-										>account settings</a
 									>
+										account settings
+									</a>
 									page.
 								</p>
 							</div>
@@ -760,6 +762,7 @@
 		</div>
 
 		<!-- JS -->
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

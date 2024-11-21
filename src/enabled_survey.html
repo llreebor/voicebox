@@ -145,7 +145,7 @@
 					<!--  Mobile menu -->
 					<div
 						id="mobile-menu"
-						class="mobile-menu group fixed -left-full top-0 h-full w-full animate-fadeIn bg-black/70"
+						class="mobile-menu group fixed -left-full top-0 z-10 h-full w-full animate-fadeIn bg-black/70"
 					>
 						<div
 							class="h-full w-0 space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
@@ -539,6 +539,7 @@
 					<div class="container">
 						<!-- [START] HTML Tabs -->
 						<div id="tabs-surveys" class="tabs">
+							<!-- Tabs Hedaer -->
 							<div
 								class="tabs-header flex flex-wrap items-center gap-10 sm:gap-5"
 							>
@@ -623,54 +624,162 @@
 								</div>
 
 								<!-- Tab Item (Responses) -->
-								<div class="tab-content hidden animate-fadeIn">
+								<div class="tab-content hidden animate-fadeIn space-y-4">
+									<!-- Responses item -->
 									<div
-										class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
+										class="response-item-trigger cursor-pointer space-y-5 divide-y divide-[#ECECEC] rounded-lg border border-[#ECECEC] bg-white p-5 shadow-tab"
 									>
-										<div class="space-y-2">
+										<div
+											class="flex items-center justify-between gap-5 pt-5 xs:flex-col"
+										>
 											<p class="text-xl font-semibold text-[#1B2B40]">
-												2. Lorem ipsum dolor sit amet consectetur adipisicing.
+												1. How satisfied are you with the new feature?
 											</p>
-											<p class="text-sm text-[#878D92]">Mood scale</p>
+											<!-- <button class="btn btn-outline xs:w-full">Summary</button> -->
 										</div>
-										<div class="flex gap-5 sm:ml-auto">
-											<button class="btn btn-outline px-4 py-3">Edit</button>
-											<button
-												class="btn border-[#EBE3E3] bg-[#FBF2F3] px-4 py-3 hover:border-[#EBE3E3] hover:bg-[#F9E7E9]"
+										<div class="space-y-2 py-5">
+											<p class="text-sm text-[#878D92]">Top answer</p>
+											<p class="text-[#878D92]">Yes</p>
+											<div
+												class="relative h-2.5 w-full overflow-hidden rounded-[10px] bg-[#DDD]"
 											>
-												<img src="./img/icons/red-trash.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
+												<span
+													style="width: 30%"
+													class="absolute left-0 top-0 block h-full overflow-hidden rounded-[10px] bg-[#1964FF]"
+												></span>
+											</div>
 										</div>
 									</div>
-									<button class="btn mt-5 w-full max-w-full">
-										Add another question
-									</button>
+
+									<!-- Responses item -->
+									<div
+										class="response-item-trigger cursor-pointer space-y-5 divide-y divide-[#ECECEC] rounded-lg border border-[#ECECEC] bg-white p-5 shadow-tab"
+									>
+										<div
+											class="flex items-center justify-between gap-5 pt-5 xs:flex-col"
+										>
+											<p class="text-xl font-semibold text-[#1B2B40]">
+												2. Would you recommend this feature to a friend?
+											</p>
+											<!-- <button class="btn btn-outline xs:w-full">Summary</button> -->
+										</div>
+										<div class="space-y-2 py-5">
+											<p class="text-sm text-[#878D92]">Top answer</p>
+											<p class="text-[#878D92]">Yes</p>
+											<div
+												class="relative h-2.5 w-full overflow-hidden rounded-[10px] bg-[#DDD]"
+											>
+												<span
+													style="width: 72%"
+													class="absolute left-0 top-0 block h-full overflow-hidden rounded-[10px] bg-[#1964FF]"
+												></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- Responses item -->
+									<div
+										class="response-item-trigger cursor-pointer space-y-5 divide-y divide-[#ECECEC] rounded-lg border border-[#ECECEC] bg-white p-5 shadow-tab"
+									>
+										<div
+											class="flex items-center justify-between gap-5 pt-5 xs:flex-col"
+										>
+											<p class="text-xl font-semibold text-[#1B2B40]">
+												3. What feature do you use the most?
+											</p>
+											<!-- <button class="btn btn-outline xs:w-full">Summary</button> -->
+										</div>
+										<div class="space-y-2 py-5">
+											<p class="text-sm text-[#878D92]">Top answer</p>
+											<p class="text-[#878D92]">Yes</p>
+											<div
+												class="relative h-2.5 w-full overflow-hidden rounded-[10px] bg-[#DDD]"
+											>
+												<span
+													style="width: 54%"
+													class="absolute left-0 top-0 block h-full overflow-hidden rounded-[10px] bg-[#1964FF]"
+												></span>
+											</div>
+										</div>
+									</div>
 								</div>
 
 								<!-- Tab Item (Questions) -->
 								<div class="tab-content hidden animate-fadeIn">
-									<div
-										class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
-									>
-										<div class="space-y-2">
-											<p class="text-xl font-semibold text-[#1B2B40]">
-												1. How satisfied are you with the new feature?
-											</p>
-											<p class="text-sm text-[#878D92]">Mood scale</p>
+									<!-- Drag N Drop Items -->
+									<div class="space-y-5" id="drag-items">
+										<div
+											class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
+										>
+											<div class="space-y-2">
+												<p class="text-xl font-semibold text-[#1B2B40]">
+													1. How satisfied are you with the new feature?
+												</p>
+												<p class="text-sm text-[#878D92]">Mood scale</p>
+											</div>
+											<div class="flex gap-5 sm:ml-auto">
+												<button class="btn btn-outline px-4 py-3">Edit</button>
+												<button
+													class="btn border-[#EBE3E3] bg-[#FBF2F3] px-4 py-3 hover:border-[#EBE3E3] hover:bg-[#F9E7E9]"
+												>
+													<img src="./img/icons/red-trash.svg" alt="icon" />
+												</button>
+												<button
+													class="btn drag-button btn-outline cursor-move border-0 bg-transparent p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+											</div>
 										</div>
-										<div class="flex gap-5 sm:ml-auto">
-											<button class="btn btn-outline px-4 py-3">Edit</button>
-											<button
-												class="btn border-[#EBE3E3] bg-[#FBF2F3] px-4 py-3 hover:border-[#EBE3E3] hover:bg-[#F9E7E9]"
-											>
-												<img src="./img/icons/red-trash.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
+
+										<div
+											class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
+										>
+											<div class="space-y-2">
+												<p class="text-xl font-semibold text-[#1B2B40]">
+													2. Would you recommend this feature to a friend?
+												</p>
+												<p class="text-sm text-[#878D92]">Single choice</p>
+											</div>
+											<div class="flex gap-5 sm:ml-auto">
+												<button class="btn btn-outline px-4 py-3">Edit</button>
+												<button
+													class="btn border-[#EBE3E3] bg-[#FBF2F3] px-4 py-3 hover:border-[#EBE3E3] hover:bg-[#F9E7E9]"
+												>
+													<img src="./img/icons/red-trash.svg" alt="icon" />
+												</button>
+												<button
+													class="btn drag-button btn-outline cursor-move border-0 bg-transparent p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+											</div>
+										</div>
+
+										<div
+											class="flex items-center justify-between gap-10 rounded-lg border border-[#ECECEC] bg-white px-5 py-10 shadow-tab sm:flex-col-reverse sm:items-start"
+										>
+											<div class="space-y-2">
+												<p class="text-xl font-semibold text-[#1B2B40]">
+													3. Which color palette do you like best?
+												</p>
+												<p class="text-sm text-[#878D92]">
+													Image single choice
+												</p>
+											</div>
+											<div class="flex gap-5 sm:ml-auto">
+												<button class="btn btn-outline px-4 py-3">Edit</button>
+												<button
+													class="btn border-[#EBE3E3] bg-[#FBF2F3] px-4 py-3 hover:border-[#EBE3E3] hover:bg-[#F9E7E9]"
+												>
+													<img src="./img/icons/red-trash.svg" alt="icon" />
+												</button>
+												<button
+													class="drag-button btn btn-outline cursor-move border-0 bg-transparent p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+											</div>
 										</div>
 									</div>
 									<button class="btn mt-5 w-full max-w-full">
@@ -682,6 +791,139 @@
 						<!-- [END] HTML Tabs -->
 					</div>
 				</section>
+
+				<!-- Response Item Drawer -->
+				<div
+					id="response_item_drawer"
+					class="response_item_drawer fixed inset-0 z-10 translate-x-full bg-[#CACBD6]/60 opacity-0"
+				>
+					<div
+						class="drawer-content ml-auto h-full w-full max-w-[640px] translate-x-full space-y-10 overflow-auto bg-white p-10 transition-all md:w-[80%] sm:w-[90%] sm:space-y-5 sm:p-5"
+					>
+						<button
+							id="response_item_drawer_close"
+							class="ml-auto flex size-7 max-w-fit items-center justify-center rounded p-2 hover:bg-gray-100"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 18 18"
+								fill="none"
+							>
+								<path
+									d="M18 1.81286L16.1871 0L9 7.18714L1.81286 0L0 1.81286L7.18714 9L0 16.1871L1.81286 18L9 10.8129L16.1871 18L18 16.1871L10.8129 9L18 1.81286Z"
+									fill="#C2C2C2"
+								/>
+							</svg>
+						</button>
+
+						<!-- Response Items -->
+						<div class="mt-10 space-y-10 sm:mt-0 sm:space-y-5">
+							<!-- Item -->
+							<div class="space-y-10 p-10 shadow-header sm:space-y-5 sm:p-5">
+								<div class="space-y-2">
+									<p class="text-sm text-[#878D92]">Text Response</p>
+									<p class="text-xl text-[#333]">Aesthetically pleasing</p>
+								</div>
+
+								<div class="flex items-center gap-4">
+									<div class="size-[30px] overflow-hidden rounded-full">
+										<img src="./img/icons/avatar-small.svg" alt="avatar" />
+									</div>
+									<p class="text-xl text-[#122036]">Anonymous #b3649404</p>
+								</div>
+							</div>
+							<!-- Item -->
+							<div class="space-y-10 p-10 shadow-header sm:space-y-5 sm:p-5">
+								<div class="space-y-2">
+									<p class="text-sm text-[#878D92]">Text Response</p>
+									<p class="text-xl text-[#333]">Aesthetically pleasing</p>
+								</div>
+
+								<div class="flex items-center gap-4">
+									<div class="size-[30px] overflow-hidden rounded-full">
+										<img src="./img/icons/avatar-small.svg" alt="avatar" />
+									</div>
+									<p class="text-xl text-[#122036]">Anonymous #b3649404</p>
+								</div>
+							</div>
+							<!-- Item -->
+							<div class="space-y-10 p-10 shadow-header sm:space-y-5 sm:p-5">
+								<div class="space-y-2">
+									<p class="text-sm text-[#878D92]">Text Response</p>
+									<p class="text-xl text-[#333]">Aesthetically pleasing</p>
+								</div>
+
+								<div class="flex items-center gap-4">
+									<div class="size-[30px] overflow-hidden rounded-full">
+										<img src="./img/icons/avatar-small.svg" alt="avatar" />
+									</div>
+									<p class="text-xl text-[#122036]">Anonymous #b3649404</p>
+								</div>
+							</div>
+							<!-- Item -->
+							<div class="space-y-10 p-10 shadow-header sm:space-y-5 sm:p-5">
+								<div class="space-y-2">
+									<p class="text-sm text-[#878D92]">Text Response</p>
+									<p class="text-xl text-[#333]">Aesthetically pleasing</p>
+								</div>
+
+								<div class="flex items-center gap-4">
+									<div class="size-[30px] overflow-hidden rounded-full">
+										<img src="./img/icons/avatar-small.svg" alt="avatar" />
+									</div>
+									<p class="text-xl text-[#122036]">Anonymous #b3649404</p>
+								</div>
+							</div>
+						</div>
+
+						<a href="#" class="btn">See more text responses</a>
+
+						<div class="space-y-4">
+							<p class="text-xl text-[#363B4A]">Stats</p>
+
+							<!-- Stats -->
+							<div class="grid grid-cols-2 gap-5 xs:grid-cols-1">
+								<div
+									class="space-y-1 rounded-xl border border-[#EAEAEA] p-5 shadow-dashboard-card"
+								>
+									<p class="text-sm text-[#ACB0B1]">Text responses</p>
+									<h2>10</h2>
+									<p class="flex gap-2 text-sm text-[#858D8F]">
+										<span class="flex gap-2 text-sm text-[#69BA7B]">
+											<img
+												class="w-4"
+												src="./img/icons/stat-icon.svg"
+												alt="icon"
+											/>
+											<b>900%</b>
+										</span>
+										from yesterday
+									</p>
+								</div>
+
+								<div
+									class="space-y-1 rounded-xl border border-[#EAEAEA] p-5 shadow-dashboard-card"
+								>
+									<p class="text-sm text-[#ACB0B1]">Total question views</p>
+									<h2>13</h2>
+									<p class="flex gap-2 text-sm text-[#858D8F]">
+										<span class="flex gap-2 text-sm text-[#69BA7B]">
+											<img
+												class="w-4"
+												src="./img/icons/stat-icon.svg"
+												alt="icon"
+											/>
+											<b>1200%</b>
+										</span>
+										from yesterday
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</main>
 
 			<!-- Footer -->
@@ -782,6 +1024,7 @@
 		</div>
 
 		<!-- JS -->
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

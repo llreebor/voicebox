@@ -375,3 +375,22 @@ if (document.getElementById('custom_url')) {
 if (document.getElementById('custom_url_survey')) {
 	previewCustomUrl('custom_url_survey', 'custom-url-survey-result')
 }
+
+// ================ Drag N Drop ================
+// Survey Questions DnD
+const questionItems = document.getElementById('drag-items')
+if (questionItems) {
+	new Sortable(questionItems, {
+		handle: '.drag-button', // handle's class
+		animation: 150,
+		chosenClass: 'current', // Class name for the chosen item
+	})
+}
+// Survey Options DnD
+const optionItems = document.getElementById('options-drag')
+if (optionItems) {
+	new Sortable(optionItems, {
+		handle: '.drag-button', // handle's class
+		animation: 150,
+	})
+}

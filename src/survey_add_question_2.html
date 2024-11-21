@@ -145,7 +145,7 @@
 					<!--  Mobile menu -->
 					<div
 						id="mobile-menu"
-						class="mobile-menu group fixed -left-full top-0 h-full w-full animate-fadeIn bg-black/70"
+						class="mobile-menu group fixed -left-full top-0 z-10 h-full w-full animate-fadeIn bg-black/70"
 					>
 						<div
 							class="h-full w-0 space-y-4 divide-y divide-gray-200 overflow-auto bg-white p-6 transition-all duration-300 group-[.open]:w-[80%]"
@@ -587,7 +587,7 @@
 										src="./img/icons/lightning.svg"
 										alt="icon"
 									/>
-									<span></span>
+									<span>
 										We use AI to provide possible answers below, if you dnot
 										like the responses click here to
 										<button
@@ -601,84 +601,94 @@
 								<!-- Options -->
 								<div class="space-y-4 pt-5">
 									<p class="text-xl text-[#060606]">Options</p>
-									<!-- Option Item -->
-									<div
-										class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
-									>
-										<input
-											class="input w-full"
-											type="text"
-											name="option-1"
-											id="option-1"
-											placeholder="Option"
-										/>
-										<div class="flex items-center gap-3 xs:ml-auto">
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-close.svg" alt="icon" />
-											</button>
+									<div id="options-drag" class="space-y-4">
+										<!-- Option Item -->
+										<div
+											class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
+										>
+											<input
+												class="input w-full"
+												type="text"
+												name="option-1"
+												id="option-1"
+												placeholder="Option"
+											/>
+											<div class="flex items-center gap-3 xs:ml-auto">
+												<button
+													class="drag-button btn btn-outline size-11 border-none p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+												<button class="btn btn-outline size-11 border-none p-0">
+													<img src="./img/icons/btn-close.svg" alt="icon" />
+												</button>
+											</div>
 										</div>
-									</div>
-									<!-- Option Item -->
-									<div
-										class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
-									>
-										<input
-											class="input w-full"
-											type="text"
-											name="option-1"
-											id="option-1"
-											placeholder="Option"
-										/>
-										<div class="flex items-center gap-3 xs:ml-auto">
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-close.svg" alt="icon" />
-											</button>
+										<!-- Option Item -->
+										<div
+											class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
+										>
+											<input
+												class="input w-full"
+												type="text"
+												name="option-1"
+												id="option-1"
+												placeholder="Option"
+											/>
+											<div class="flex items-center gap-3 xs:ml-auto">
+												<button
+													class="drag-button btn btn-outline size-11 border-none p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+												<button class="btn btn-outline size-11 border-none p-0">
+													<img src="./img/icons/btn-close.svg" alt="icon" />
+												</button>
+											</div>
 										</div>
-									</div>
-									<!-- Option Item -->
-									<div
-										class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
-									>
-										<input
-											class="input w-full"
-											type="text"
-											name="option-1"
-											id="option-1"
-											placeholder="Option"
-										/>
-										<div class="flex items-center gap-3 xs:ml-auto">
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-close.svg" alt="icon" />
-											</button>
+										<!-- Option Item -->
+										<div
+											class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
+										>
+											<input
+												class="input w-full"
+												type="text"
+												name="option-1"
+												id="option-1"
+												placeholder="Option"
+											/>
+											<div class="flex items-center gap-3 xs:ml-auto">
+												<button
+													class="btn drag-button btn-outline size-11 border-none p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+												<button class="btn btn-outline size-11 border-none p-0">
+													<img src="./img/icons/btn-close.svg" alt="icon" />
+												</button>
+											</div>
 										</div>
-									</div>
-									<!-- Option Item -->
-									<div
-										class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
-									>
-										<input
-											class="input w-full"
-											type="text"
-											name="option-1"
-											id="option-1"
-											placeholder="Option"
-										/>
-										<div class="flex items-center gap-3 xs:ml-auto">
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-dots.svg" alt="icon" />
-											</button>
-											<button class="btn btn-outline size-11 border-none p-0">
-												<img src="./img/icons/btn-close.svg" alt="icon" />
-											</button>
+										<!-- Option Item -->
+										<div
+											class="flex items-center justify-between gap-5 xs:flex-col xs:gap-1"
+										>
+											<input
+												class="input w-full"
+												type="text"
+												name="option-1"
+												id="option-1"
+												placeholder="Option"
+											/>
+											<div class="flex items-center gap-3 xs:ml-auto">
+												<button
+													class="btn drag-button btn-outline size-11 border-none p-0 shadow-none"
+												>
+													<img src="./img/icons/btn-dots.svg" alt="icon" />
+												</button>
+												<button class="btn btn-outline size-11 border-none p-0">
+													<img src="./img/icons/btn-close.svg" alt="icon" />
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -868,6 +878,7 @@
 		</div>
 
 		<!-- JS -->
+		<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

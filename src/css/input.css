@@ -65,3 +65,9 @@
 		@apply left-0;
 	}
 }
+
+@layer utilities {
+	.current {
+		@apply bg-[#f2f2f2];
+	}
+}
