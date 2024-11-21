@@ -1455,8 +1455,8 @@ label {
   max-width: 452px;
 }
 
-.max-w-\[460px\] {
-  max-width: 460px;
+.max-w-\[462px\] {
+  max-width: 462px;
 }
 
 .max-w-\[522px\] {
@@ -1506,10 +1506,6 @@ label {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[462px\] {
-  max-width: 462px;
 }
 
 .flex-1 {
@@ -2364,6 +2360,11 @@ label {
   color: rgb(18 32 54 / var(--tw-text-opacity));
 }
 
+.text-\[\#151515\] {
+  --tw-text-opacity: 1;
+  color: rgb(21 21 21 / var(--tw-text-opacity));
+}
+
 .text-\[\#1B2B40\] {
   --tw-text-opacity: 1;
   color: rgb(27 43 64 / var(--tw-text-opacity));
@@ -2757,11 +2758,6 @@ label {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#151515\] {
-  --tw-text-opacity: 1;
-  color: rgb(21 21 21 / var(--tw-text-opacity));
 }
 
 .underline {
